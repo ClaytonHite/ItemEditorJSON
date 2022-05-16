@@ -46,25 +46,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Attributes.cs" />
+    <Compile Include="EquipmentType.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Item.cs" />
+    <Compile Include="ItemCreator.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -78,6 +83,69 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1000.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1002.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1003.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1004.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1005.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1006.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1007.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1008.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1009.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1010.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1011.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1012.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1013.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1014.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1015.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1016.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1017.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1018.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1019.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1020.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

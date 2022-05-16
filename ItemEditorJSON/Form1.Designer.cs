@@ -155,7 +155,7 @@ namespace ItemEditorJSON
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(311, 11);
+            this.pictureBox1.Location = new System.Drawing.Point(364, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(128, 96);
             this.pictureBox1.TabIndex = 9;
@@ -291,6 +291,7 @@ namespace ItemEditorJSON
             this.AddButton.TabIndex = 22;
             this.AddButton.Text = "Add";
             this.AddButton.UseVisualStyleBackColor = true;
+            this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
             // 
             // DeleteButton
             // 
@@ -362,14 +363,9 @@ namespace ItemEditorJSON
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox ItemNameTextBox;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox ItemTypeTextBox;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox ItemIDTextBox;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox ImageNumberTextBox;
-        private System.Windows.Forms.CheckBox StackableBoolean;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button LeftButtonImage;
         private System.Windows.Forms.Button RightButtonImage;
@@ -387,6 +383,11 @@ namespace ItemEditorJSON
         private System.Windows.Forms.Button DeleteButton;
         private System.Windows.Forms.Button LoadButton;
         private System.Windows.Forms.Button SaveButton;
+        public System.Windows.Forms.TextBox ItemNameTextBox;
+        public System.Windows.Forms.TextBox ItemTypeTextBox;
+        public System.Windows.Forms.TextBox ItemIDTextBox;
+        public System.Windows.Forms.TextBox ImageNumberTextBox;
+        public System.Windows.Forms.CheckBox StackableBoolean;
     }
 }
 

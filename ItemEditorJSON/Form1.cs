@@ -12,6 +12,7 @@ namespace ItemEditorJSON
 {
     public partial class Form1 : Form
     {
+        ItemCreator instance;
         public Form1()
         {
             InitializeComponent();
@@ -30,6 +31,11 @@ namespace ItemEditorJSON
         private void RightButtonImage_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void AddButton_Click(object sender, EventArgs e)
+        {
+            instance.AddItem();
         }
     }
 }
