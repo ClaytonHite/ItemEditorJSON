@@ -35,7 +35,7 @@ namespace ItemEditorJSON
         {
             int itemID = Convert.ToInt32(ItemIDTextBox.Text);
             string itemName = ItemNameTextBox.Text;
-            string itemType = ItemTypeTextBox.Text;
+            string itemType = ItemTypeDropdownBox.Text;
             string article = "a";
             int itemDamage = 0;
             int itemArmor = 0;
