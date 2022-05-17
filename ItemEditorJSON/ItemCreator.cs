@@ -9,9 +9,9 @@ namespace ItemEditorJSON
     class ItemCreator
     {
         public Form1 instance;
-        public void AddItem()
+        public void AddItem(int itemID, string itemName, string equipmentType, int[] attributes, int imageNumber, bool stackable)
         {
-            Item itemToAdd = new Item(Convert.ToInt32(instance.ItemIDTextBox.Text), instance.ItemNameTextBox.Text, new EquipmentType(instance.ItemTypeTextBox.Text), new Attributes(null, null, 0, 0), Convert.ToInt32(instance.ImageNumberTextBox.Text), instance.StackableBoolean.Checked);
+            new Item(itemID, itemName, new EquipmentType(equipmentType), new Attributes(null, null, attributes[0], attributes[1]), imageNumber, stackable);
         }
     }
 }

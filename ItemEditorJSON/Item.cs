@@ -16,7 +16,7 @@ namespace ItemEditorJSON
         public Attributes Attributes;
         public int ImageNumber;
         public bool Stackable;
-        public List<Item> ItemList = new List<Item>();
+        public static List<Item> ItemList = new List<Item>();
         //healthAmountPerTick//healthTimeTicks//manaAmountPerTick//manaTimeTicks
         public Item(int _id, string _name, EquipmentType _equipmentType, Attributes _attributes, int _imageNumber, bool _stackable)
         {

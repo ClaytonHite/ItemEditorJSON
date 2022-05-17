@@ -12,30 +12,45 @@ namespace ItemEditorJSON
 {
     public partial class Form1 : Form
     {
-        ItemCreator instance;
+        ItemCreator instance = new ItemCreator();
         public Form1()
         {
             InitializeComponent();
+            ItemIDTextBox.Text = "1";
+            ImageNumberTextBox.Text = "1";
         }
-
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
-
         private void LeftButtonImage_Click(object sender, EventArgs e)
         {
 
         }
-
         private void RightButtonImage_Click(object sender, EventArgs e)
         {
 
         }
-
         private void AddButton_Click(object sender, EventArgs e)
         {
-            instance.AddItem();
+            int itemID = Convert.ToInt32(ItemIDTextBox.Text);
+            string itemName = ItemNameTextBox.Text;
+            string itemType = ItemTypeTextBox.Text;
+            int itemDamage = 0;
+            int itemArmor = 0;
+            int[] itemAttributes = {itemDamage, itemArmor};
+            int imageNumber = Convert.ToInt32(ImageNumberTextBox.Text);
+            bool stackable = StackableBoolean.Checked;
+            instance.AddItem(itemID, itemName, itemType, itemAttributes, imageNumber, stackable);
+            RefreshItemList();
+        }
+        void RefreshItemList()
+        {
+            listBox1.Items.Clear();
+            foreach (Item item in Item.ItemList)
+            {
+                listBox1.Items.Add($"{item.ID} -- {item.Name}");
+            }
         }
     }
 }
