@@ -18,6 +18,9 @@ namespace ItemEditorJSON
             InitializeComponent();
             ItemIDTextBox.Text = "1";
             ImageNumberTextBox.Text = "1";
+            WeaponPanel.Hide();
+            ArmorPanel.Hide();
+            FoodPanel.Hide();
         }
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -36,9 +39,11 @@ namespace ItemEditorJSON
             int itemID = Convert.ToInt32(ItemIDTextBox.Text);
             string itemName = ItemNameTextBox.Text;
             string itemType = ItemTypeDropdownBox.Text;
-            string article = "a";
-            int itemDamage = 0;
-            int itemArmor = 0;
+            string weaponType = WeaponTypeComboBox.Text;
+            string armorType = ArmorTypeComboBox.Text;
+            string article = ArticleTextBox.Text;
+            int itemDamage = Convert.ToInt32(DamageAmountTextBox.Text);
+            int itemArmor = Convert.ToInt32(ArmorAmountTextBox.Text);
             int[] itemAttributes = {itemDamage, itemArmor};
             int imageNumber = Convert.ToInt32(ImageNumberTextBox.Text);
             bool stackable = StackableBoolean.Checked;
@@ -51,6 +56,55 @@ namespace ItemEditorJSON
             foreach (Item item in Item.ItemList)
             {
                 listBox1.Items.Add($"{item.ID} -- {item.Name}");
+            }
+        }
+
+        private void ItemTypeDropdownBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(ItemTypeDropdownBox.SelectedIndex == 0)
+            {
+                WeaponPanel.Hide();
+                WeaponTypeComboBox.SelectedIndex = 0;
+                DamageAmountTextBox.Text = "0";
+                FoodPanel.Hide();
+                HealthAmountPerTick.Text = "0";
+                ManaAmountPerTick.Text = "0";
+                FullDuration.Text = "0";
+                ArmorPanel.Show();
+            }
+            if (ItemTypeDropdownBox.SelectedIndex == 1)
+            {
+                WeaponPanel.Show();
+                FoodPanel.Hide();
+                HealthAmountPerTick.Text = "0";
+                ManaAmountPerTick.Text = "0";
+                FullDuration.Text = "0";
+                ArmorPanel.Hide();
+                ArmorTypeComboBox.SelectedIndex = 0;
+                ArmorAmountTextBox.Text = "0";
+            }
+            if (ItemTypeDropdownBox.SelectedIndex == 2)
+            {
+                WeaponPanel.Hide();
+                WeaponTypeComboBox.SelectedIndex = 0;
+                DamageAmountTextBox.Text = "0";
+                FoodPanel.Show();
+                ArmorPanel.Hide();
+                ArmorTypeComboBox.SelectedIndex = 0;
+                ArmorAmountTextBox.Text = "0";
+            }
+            if(ItemTypeDropdownBox.SelectedIndex >= 3)
+            {
+                WeaponPanel.Hide();
+                WeaponTypeComboBox.SelectedIndex = 0;
+                DamageAmountTextBox.Text = "0";
+                FoodPanel.Hide();
+                HealthAmountPerTick.Text = "0";
+                ManaAmountPerTick.Text = "0";
+                FullDuration.Text = "0";
+                ArmorPanel.Hide();
+                ArmorTypeComboBox.SelectedIndex = 0;
+                ArmorAmountTextBox.Text = "0";
             }
         }
     }
