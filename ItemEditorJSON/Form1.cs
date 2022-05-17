@@ -36,12 +36,13 @@ namespace ItemEditorJSON
             int itemID = Convert.ToInt32(ItemIDTextBox.Text);
             string itemName = ItemNameTextBox.Text;
             string itemType = ItemTypeTextBox.Text;
+            string article = "a";
             int itemDamage = 0;
             int itemArmor = 0;
             int[] itemAttributes = {itemDamage, itemArmor};
             int imageNumber = Convert.ToInt32(ImageNumberTextBox.Text);
             bool stackable = StackableBoolean.Checked;
-            instance.AddItem(itemID, itemName, itemType, itemAttributes, imageNumber, stackable);
+            instance.AddItem(itemID, article, itemName, itemType, itemAttributes, imageNumber, stackable);
             RefreshItemList();
         }
         void RefreshItemList()

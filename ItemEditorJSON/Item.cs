@@ -18,9 +18,10 @@ namespace ItemEditorJSON
         public bool Stackable;
         public static List<Item> ItemList = new List<Item>();
         //healthAmountPerTick//healthTimeTicks//manaAmountPerTick//manaTimeTicks
-        public Item(int _id, string _name, EquipmentType _equipmentType, Attributes _attributes, int _imageNumber, bool _stackable)
+        public Item(int _id, string article, string _name, EquipmentType _equipmentType, Attributes _attributes, int _imageNumber, bool _stackable)
         {
             this.ID = _id;
+            this.Article = article;
             this.Name = _name;
             this.equipmentType = _equipmentType;
             this.Attributes = _attributes;
