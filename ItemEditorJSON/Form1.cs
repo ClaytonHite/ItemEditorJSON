@@ -13,11 +13,10 @@ namespace ItemEditorJSON
 {
     public partial class Form1 : Form
     {
-        int numberOfImages = 0;
+        int numberOfImages = 21;
         public Form1()
         {
             InitializeComponent();
-            ItemIDTextBox.Text = "1";
             ImageNumberTextBox.Text = "1";
             WeaponPanel.Hide();
             ArmorPanel.Hide();
@@ -26,6 +25,8 @@ namespace ItemEditorJSON
             ToolPanel.Hide();
             CurrencyPanel.Hide();
             ImageNumberTextBox.Text = "1000";
+            ItemIDTextBox.Text = ImageNumberTextBox.Text;
+            pictureBox1.Image = (Image)Properties.Resources.ResourceManager.GetObject("_" + ImageNumberTextBox.Text);
         }
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -37,10 +38,19 @@ namespace ItemEditorJSON
             {
                 ImageNumberTextBox.Text = $"{numberOfImages + 1000}";
             }
+            ImageNumberTextBox.Text = $"{Convert.ToInt32(ImageNumberTextBox.Text) - 1}";
+            ItemIDTextBox.Text = ImageNumberTextBox.Text;
+            pictureBox1.Image = (Image)Properties.Resources.ResourceManager.GetObject("_" + ImageNumberTextBox.Text);
         }
         private void RightButtonImage_Click(object sender, EventArgs e)
         {
-
+            if (Convert.ToInt32(ImageNumberTextBox.Text) >= 1000 + numberOfImages - 1)
+            {
+                ImageNumberTextBox.Text = $"{999}";
+            }
+            ImageNumberTextBox.Text = $"{Convert.ToInt32(ImageNumberTextBox.Text) + 1}";
+            ItemIDTextBox.Text = ImageNumberTextBox.Text;
+            pictureBox1.Image = (Image)Properties.Resources.ResourceManager.GetObject("_" + ImageNumberTextBox.Text);
         }
         private void AddButton_Click(object sender, EventArgs e)
         {
@@ -103,7 +113,7 @@ namespace ItemEditorJSON
 
         private void ItemTypeDropdownBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(ItemTypeDropdownBox.SelectedIndex == 0)
+            if (ItemTypeDropdownBox.SelectedIndex == 0)
             {
                 AmmoPanel.Show();
                 ArmorPanel.Hide();
