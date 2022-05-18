@@ -73,6 +73,8 @@ namespace ItemEditorJSON
             this.DamageAmountTextBox = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.FoodPanel = new System.Windows.Forms.Panel();
+            this.FoodPriceTextBox = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
             this.ManaAmountPerTick = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.FullDuration = new System.Windows.Forms.TextBox();
@@ -81,18 +83,30 @@ namespace ItemEditorJSON
             this.label15 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.ItemWeightTextBox = new System.Windows.Forms.TextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.AmmoPanel = new System.Windows.Forms.Panel();
             this.AmmoPriceTextBox = new System.Windows.Forms.TextBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.AmmoDamageAmountTextBox = new System.Windows.Forms.TextBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.ToolPanel = new System.Windows.Forms.Panel();
+            this.ToolPriceTextBox = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
-            this.AmmoDamageTextBox = new System.Windows.Forms.TextBox();
+            this.ToolTypeComboBox = new System.Windows.Forms.ComboBox();
             this.label22 = new System.Windows.Forms.Label();
+            this.ToolDamageTextBox = new System.Windows.Forms.TextBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.CurrencyPanel = new System.Windows.Forms.Panel();
+            this.label29 = new System.Windows.Forms.Label();
+            this.CurrencyPriceTextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.ArmorPanel.SuspendLayout();
             this.WeaponPanel.SuspendLayout();
             this.FoodPanel.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.AmmoPanel.SuspendLayout();
+            this.ToolPanel.SuspendLayout();
+            this.CurrencyPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -383,7 +397,7 @@ namespace ItemEditorJSON
             this.ArmorPanel.Controls.Add(this.label10);
             this.ArmorPanel.Controls.Add(this.ArmorAmountTextBox);
             this.ArmorPanel.Controls.Add(this.label9);
-            this.ArmorPanel.Location = new System.Drawing.Point(31, 307);
+            this.ArmorPanel.Location = new System.Drawing.Point(35, 340);
             this.ArmorPanel.Name = "ArmorPanel";
             this.ArmorPanel.Size = new System.Drawing.Size(577, 519);
             this.ArmorPanel.TabIndex = 26;
@@ -467,14 +481,13 @@ namespace ItemEditorJSON
             this.ItemTypeDropdownBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ItemTypeDropdownBox.FormattingEnabled = true;
             this.ItemTypeDropdownBox.Items.AddRange(new object[] {
+            "Ammo",
             "Armor",
-            "Weapon",
-            "Food",
-            "Tool",
             "Currency",
+            "Food",
             "Miscellaneous",
-            "",
-            ""});
+            "Tool",
+            "Weapon"});
             this.ItemTypeDropdownBox.Location = new System.Drawing.Point(298, 143);
             this.ItemTypeDropdownBox.Name = "ItemTypeDropdownBox";
             this.ItemTypeDropdownBox.Size = new System.Drawing.Size(312, 33);
@@ -506,7 +519,6 @@ namespace ItemEditorJSON
             // WeaponPanel
             // 
             this.WeaponPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.WeaponPanel.Controls.Add(this.panel1);
             this.WeaponPanel.Controls.Add(this.WeaponPriceTextBox);
             this.WeaponPanel.Controls.Add(this.WeaponTwoHandedCheckBox);
             this.WeaponPanel.Controls.Add(this.label19);
@@ -514,7 +526,7 @@ namespace ItemEditorJSON
             this.WeaponPanel.Controls.Add(this.label12);
             this.WeaponPanel.Controls.Add(this.DamageAmountTextBox);
             this.WeaponPanel.Controls.Add(this.label13);
-            this.WeaponPanel.Location = new System.Drawing.Point(29, 307);
+            this.WeaponPanel.Location = new System.Drawing.Point(35, 340);
             this.WeaponPanel.Name = "WeaponPanel";
             this.WeaponPanel.Size = new System.Drawing.Size(577, 519);
             this.WeaponPanel.TabIndex = 30;
@@ -606,16 +618,40 @@ namespace ItemEditorJSON
             // FoodPanel
             // 
             this.FoodPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.FoodPanel.Controls.Add(this.FoodPriceTextBox);
+            this.FoodPanel.Controls.Add(this.label20);
             this.FoodPanel.Controls.Add(this.ManaAmountPerTick);
             this.FoodPanel.Controls.Add(this.label14);
             this.FoodPanel.Controls.Add(this.FullDuration);
             this.FoodPanel.Controls.Add(this.label16);
             this.FoodPanel.Controls.Add(this.HealthAmountPerTick);
             this.FoodPanel.Controls.Add(this.label15);
-            this.FoodPanel.Location = new System.Drawing.Point(31, 307);
+            this.FoodPanel.Location = new System.Drawing.Point(35, 340);
             this.FoodPanel.Name = "FoodPanel";
             this.FoodPanel.Size = new System.Drawing.Size(577, 519);
             this.FoodPanel.TabIndex = 31;
+            // 
+            // FoodPriceTextBox
+            // 
+            this.FoodPriceTextBox.BackColor = System.Drawing.Color.DarkGray;
+            this.FoodPriceTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.FoodPriceTextBox.Location = new System.Drawing.Point(277, 167);
+            this.FoodPriceTextBox.Margin = new System.Windows.Forms.Padding(6);
+            this.FoodPriceTextBox.Name = "FoodPriceTextBox";
+            this.FoodPriceTextBox.Size = new System.Drawing.Size(250, 31);
+            this.FoodPriceTextBox.TabIndex = 34;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.ForeColor = System.Drawing.SystemColors.Control;
+            this.label20.Location = new System.Drawing.Point(6, 161);
+            this.label20.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(114, 37);
+            this.label20.TabIndex = 33;
+            this.label20.Text = "Price :";
             // 
             // ManaAmountPerTick
             // 
@@ -705,19 +741,19 @@ namespace ItemEditorJSON
             this.ItemWeightTextBox.Size = new System.Drawing.Size(310, 31);
             this.ItemWeightTextBox.TabIndex = 33;
             // 
-            // panel1
+            // AmmoPanel
             // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.AmmoPriceTextBox);
-            this.panel1.Controls.Add(this.label20);
-            this.panel1.Controls.Add(this.comboBox1);
-            this.panel1.Controls.Add(this.label21);
-            this.panel1.Controls.Add(this.AmmoDamageTextBox);
-            this.panel1.Controls.Add(this.label22);
-            this.panel1.Location = new System.Drawing.Point(0, -2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(577, 519);
-            this.panel1.TabIndex = 34;
+            this.AmmoPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.AmmoPanel.Controls.Add(this.AmmoPriceTextBox);
+            this.AmmoPanel.Controls.Add(this.label23);
+            this.AmmoPanel.Controls.Add(this.comboBox2);
+            this.AmmoPanel.Controls.Add(this.label24);
+            this.AmmoPanel.Controls.Add(this.AmmoDamageAmountTextBox);
+            this.AmmoPanel.Controls.Add(this.label25);
+            this.AmmoPanel.Location = new System.Drawing.Point(35, 340);
+            this.AmmoPanel.Name = "AmmoPanel";
+            this.AmmoPanel.Size = new System.Drawing.Size(577, 519);
+            this.AmmoPanel.TabIndex = 35;
             // 
             // AmmoPriceTextBox
             // 
@@ -729,65 +765,181 @@ namespace ItemEditorJSON
             this.AmmoPriceTextBox.Size = new System.Drawing.Size(250, 31);
             this.AmmoPriceTextBox.TabIndex = 35;
             // 
-            // label20
+            // label23
             // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.SystemColors.Control;
-            this.label20.Location = new System.Drawing.Point(88, 113);
-            this.label20.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(114, 37);
-            this.label20.TabIndex = 30;
-            this.label20.Text = "Price :";
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.ForeColor = System.Drawing.SystemColors.Control;
+            this.label23.Location = new System.Drawing.Point(88, 113);
+            this.label23.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(114, 37);
+            this.label23.TabIndex = 30;
+            this.label23.Text = "Price :";
             // 
-            // comboBox1
+            // comboBox2
             // 
-            this.comboBox1.BackColor = System.Drawing.Color.DarkGray;
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.comboBox2.BackColor = System.Drawing.Color.DarkGray;
+            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
             "Arrow",
             "Bolt",
             "Throwing Knife"});
-            this.comboBox1.Location = new System.Drawing.Point(258, 20);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(312, 33);
-            this.comboBox1.TabIndex = 28;
+            this.comboBox2.Location = new System.Drawing.Point(258, 20);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(312, 33);
+            this.comboBox2.TabIndex = 28;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.ForeColor = System.Drawing.SystemColors.Control;
+            this.label24.Location = new System.Drawing.Point(6, 16);
+            this.label24.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(219, 37);
+            this.label24.TabIndex = 9;
+            this.label24.Text = "Ammo Type :";
+            // 
+            // AmmoDamageAmountTextBox
+            // 
+            this.AmmoDamageAmountTextBox.BackColor = System.Drawing.Color.DarkGray;
+            this.AmmoDamageAmountTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.AmmoDamageAmountTextBox.Location = new System.Drawing.Point(310, 72);
+            this.AmmoDamageAmountTextBox.Margin = new System.Windows.Forms.Padding(6);
+            this.AmmoDamageAmountTextBox.Name = "AmmoDamageAmountTextBox";
+            this.AmmoDamageAmountTextBox.Size = new System.Drawing.Size(250, 31);
+            this.AmmoDamageAmountTextBox.TabIndex = 8;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.ForeColor = System.Drawing.SystemColors.Control;
+            this.label25.Location = new System.Drawing.Point(6, 66);
+            this.label25.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(292, 37);
+            this.label25.TabIndex = 7;
+            this.label25.Text = "Damage Amount :";
+            // 
+            // ToolPanel
+            // 
+            this.ToolPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.ToolPanel.Controls.Add(this.ToolPriceTextBox);
+            this.ToolPanel.Controls.Add(this.label21);
+            this.ToolPanel.Controls.Add(this.ToolTypeComboBox);
+            this.ToolPanel.Controls.Add(this.label22);
+            this.ToolPanel.Controls.Add(this.ToolDamageTextBox);
+            this.ToolPanel.Controls.Add(this.label26);
+            this.ToolPanel.Location = new System.Drawing.Point(35, 340);
+            this.ToolPanel.Name = "ToolPanel";
+            this.ToolPanel.Size = new System.Drawing.Size(577, 519);
+            this.ToolPanel.TabIndex = 36;
+            // 
+            // ToolPriceTextBox
+            // 
+            this.ToolPriceTextBox.BackColor = System.Drawing.Color.DarkGray;
+            this.ToolPriceTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ToolPriceTextBox.Location = new System.Drawing.Point(277, 113);
+            this.ToolPriceTextBox.Margin = new System.Windows.Forms.Padding(6);
+            this.ToolPriceTextBox.Name = "ToolPriceTextBox";
+            this.ToolPriceTextBox.Size = new System.Drawing.Size(250, 31);
+            this.ToolPriceTextBox.TabIndex = 32;
             // 
             // label21
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.ForeColor = System.Drawing.SystemColors.Control;
-            this.label21.Location = new System.Drawing.Point(6, 16);
+            this.label21.Location = new System.Drawing.Point(54, 114);
             this.label21.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(219, 37);
-            this.label21.TabIndex = 9;
-            this.label21.Text = "Ammo Type :";
+            this.label21.Size = new System.Drawing.Size(114, 37);
+            this.label21.TabIndex = 31;
+            this.label21.Text = "Price :";
             // 
-            // AmmoDamageTextBox
+            // ToolTypeComboBox
             // 
-            this.AmmoDamageTextBox.BackColor = System.Drawing.Color.DarkGray;
-            this.AmmoDamageTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.AmmoDamageTextBox.Location = new System.Drawing.Point(310, 72);
-            this.AmmoDamageTextBox.Margin = new System.Windows.Forms.Padding(6);
-            this.AmmoDamageTextBox.Name = "AmmoDamageTextBox";
-            this.AmmoDamageTextBox.Size = new System.Drawing.Size(250, 31);
-            this.AmmoDamageTextBox.TabIndex = 8;
+            this.ToolTypeComboBox.BackColor = System.Drawing.Color.DarkGray;
+            this.ToolTypeComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ToolTypeComboBox.FormattingEnabled = true;
+            this.ToolTypeComboBox.Items.AddRange(new object[] {
+            "Forestry",
+            "Mining",
+            "Cooking"});
+            this.ToolTypeComboBox.Location = new System.Drawing.Point(230, 20);
+            this.ToolTypeComboBox.Name = "ToolTypeComboBox";
+            this.ToolTypeComboBox.Size = new System.Drawing.Size(312, 33);
+            this.ToolTypeComboBox.TabIndex = 28;
             // 
             // label22
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.ForeColor = System.Drawing.SystemColors.Control;
-            this.label22.Location = new System.Drawing.Point(6, 66);
+            this.label22.Location = new System.Drawing.Point(6, 16);
             this.label22.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(292, 37);
-            this.label22.TabIndex = 7;
-            this.label22.Text = "Damage Amount :";
+            this.label22.Size = new System.Drawing.Size(188, 37);
+            this.label22.TabIndex = 9;
+            this.label22.Text = "Tool Type :";
+            // 
+            // ToolDamageTextBox
+            // 
+            this.ToolDamageTextBox.BackColor = System.Drawing.Color.DarkGray;
+            this.ToolDamageTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ToolDamageTextBox.Location = new System.Drawing.Point(277, 72);
+            this.ToolDamageTextBox.Margin = new System.Windows.Forms.Padding(6);
+            this.ToolDamageTextBox.Name = "ToolDamageTextBox";
+            this.ToolDamageTextBox.Size = new System.Drawing.Size(250, 31);
+            this.ToolDamageTextBox.TabIndex = 8;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.ForeColor = System.Drawing.SystemColors.Control;
+            this.label26.Location = new System.Drawing.Point(6, 66);
+            this.label26.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(241, 37);
+            this.label26.TabIndex = 7;
+            this.label26.Text = "Tool Damage :";
+            // 
+            // CurrencyPanel
+            // 
+            this.CurrencyPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.CurrencyPanel.Controls.Add(this.CurrencyPriceTextBox);
+            this.CurrencyPanel.Controls.Add(this.label29);
+            this.CurrencyPanel.Location = new System.Drawing.Point(35, 340);
+            this.CurrencyPanel.Name = "CurrencyPanel";
+            this.CurrencyPanel.Size = new System.Drawing.Size(577, 519);
+            this.CurrencyPanel.TabIndex = 37;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.ForeColor = System.Drawing.SystemColors.Control;
+            this.label29.Location = new System.Drawing.Point(2, 11);
+            this.label29.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(261, 37);
+            this.label29.TabIndex = 7;
+            this.label29.Text = "Currency Price :";
+            // 
+            // CurrencyPriceTextBox
+            // 
+            this.CurrencyPriceTextBox.BackColor = System.Drawing.Color.DarkGray;
+            this.CurrencyPriceTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.CurrencyPriceTextBox.Location = new System.Drawing.Point(288, 18);
+            this.CurrencyPriceTextBox.Margin = new System.Windows.Forms.Padding(6);
+            this.CurrencyPriceTextBox.Name = "CurrencyPriceTextBox";
+            this.CurrencyPriceTextBox.Size = new System.Drawing.Size(250, 31);
+            this.CurrencyPriceTextBox.TabIndex = 32;
             // 
             // Form1
             // 
@@ -826,7 +978,10 @@ namespace ItemEditorJSON
             this.Controls.Add(this.ItemNameTextBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.WeaponPanel);
+            this.Controls.Add(this.CurrencyPanel);
+            this.Controls.Add(this.ToolPanel);
             this.Controls.Add(this.ArmorPanel);
+            this.Controls.Add(this.AmmoPanel);
             this.Controls.Add(this.FoodPanel);
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Form1";
@@ -838,8 +993,12 @@ namespace ItemEditorJSON
             this.WeaponPanel.PerformLayout();
             this.FoodPanel.ResumeLayout(false);
             this.FoodPanel.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.AmmoPanel.ResumeLayout(false);
+            this.AmmoPanel.PerformLayout();
+            this.ToolPanel.ResumeLayout(false);
+            this.ToolPanel.PerformLayout();
+            this.CurrencyPanel.ResumeLayout(false);
+            this.CurrencyPanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -899,13 +1058,25 @@ namespace ItemEditorJSON
         private System.Windows.Forms.Label label19;
         public System.Windows.Forms.TextBox ArmorPriceTextBox;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel AmmoPanel;
         public System.Windows.Forms.TextBox AmmoPriceTextBox;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Label label24;
+        public System.Windows.Forms.TextBox AmmoDamageAmountTextBox;
+        private System.Windows.Forms.Label label25;
+        public System.Windows.Forms.TextBox FoodPriceTextBox;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Panel ToolPanel;
+        public System.Windows.Forms.TextBox ToolPriceTextBox;
         private System.Windows.Forms.Label label21;
-        public System.Windows.Forms.TextBox AmmoDamageTextBox;
+        private System.Windows.Forms.ComboBox ToolTypeComboBox;
         private System.Windows.Forms.Label label22;
+        public System.Windows.Forms.TextBox ToolDamageTextBox;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Panel CurrencyPanel;
+        public System.Windows.Forms.TextBox CurrencyPriceTextBox;
+        private System.Windows.Forms.Label label29;
     }
 }
 

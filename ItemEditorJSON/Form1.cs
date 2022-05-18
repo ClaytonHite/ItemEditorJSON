@@ -22,6 +22,9 @@ namespace ItemEditorJSON
             WeaponPanel.Hide();
             ArmorPanel.Hide();
             FoodPanel.Hide();
+            AmmoPanel.Hide();
+            ToolPanel.Hide();
+            CurrencyPanel.Hide();
             ImageNumberTextBox.Text = "1000";
         }
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -54,12 +57,10 @@ namespace ItemEditorJSON
             bool stackable = StackableBoolean.Checked;
             switch (itemType)
             {
-                case "Weapon":
-                    itemDamage = Convert.ToInt32(DamageAmountTextBox.Text);
-                    price = Convert.ToInt32(WeaponPriceTextBox.Text);
-                    bool hands = WeaponTwoHandedCheckBox.Checked;
-                    weaponType = WeaponTypeComboBox.Text;
-                    new Weapon(itemID, article, itemName, imageNumber, weight, stackable, weaponType, itemDamage, hands, price);
+                case "Ammo":
+                    itemDamage = Convert.ToInt32(AmmoDamageAmountTextBox.Text);
+                    price = Convert.ToInt32(AmmoPriceTextBox.Text);
+                    new Ammo(itemID, article, itemName, imageNumber, weight, stackable, itemType, itemDamage, price);
                     break;
                 case "Armor":
                     armorType = ArmorTypeComboBox.Text;
@@ -67,15 +68,25 @@ namespace ItemEditorJSON
                     int itemArmor = Convert.ToInt32(ArmorAmountTextBox.Text);
                     new Armor(itemID, article, itemName, imageNumber, weight, stackable, armorType, itemArmor, price);
                     break;
-                case "Ammo":
-                    itemDamage = Convert.ToInt32(AmmoDamageTextBox.Text);
-                    price = Convert.ToInt32(AmmoPriceTextBox.Text);
-                    new Ammo(itemID, article, itemName, imageNumber, weight, stackable, itemType, itemDamage, price);
-                    break;
-                case "food":
-
+                case "Currency":
+                    new Currency();
+                        break;
+                case "Food":
+                    int HAPT = Convert.ToInt32(HealthAmountPerTick.Text);
+                    int MAPT = Convert.ToInt32(ManaAmountPerTick.Text);
+                    int FD = Convert.ToInt32(FullDuration.Text);
+                    price = Convert.ToInt32(FoodPriceTextBox.Text);
+                    new Food(itemID, article, itemName, imageNumber, weight, stackable, itemType, HAPT, MAPT, FD, price);
                     break;
                 case "Miscellaneous":
+                    new Miscellaneous(itemID, article, itemName, imageNumber, weight, stackable, itemType);
+                    break;
+                case "Weapon":
+                    itemDamage = Convert.ToInt32(DamageAmountTextBox.Text);
+                    price = Convert.ToInt32(WeaponPriceTextBox.Text);
+                    bool hands = WeaponTwoHandedCheckBox.Checked;
+                    weaponType = WeaponTypeComboBox.Text;
+                    new Weapon(itemID, article, itemName, imageNumber, weight, stackable, weaponType, itemDamage, hands, price);
                     break;
             }
             RefreshItemList();
@@ -93,48 +104,66 @@ namespace ItemEditorJSON
         {
             if(ItemTypeDropdownBox.SelectedIndex == 0)
             {
-                WeaponPanel.Hide();
-                WeaponTypeComboBox.SelectedIndex = 0;
-                DamageAmountTextBox.Text = "0";
+                AmmoPanel.Show();
+                ArmorPanel.Hide();
+                CurrencyPanel.Hide();
                 FoodPanel.Hide();
-                HealthAmountPerTick.Text = "0";
-                ManaAmountPerTick.Text = "0";
-                FullDuration.Text = "0";
-                ArmorPanel.Show();
+                ToolPanel.Hide();
+                WeaponPanel.Hide();
             }
             if (ItemTypeDropdownBox.SelectedIndex == 1)
             {
-                WeaponPanel.Show();
+                AmmoPanel.Hide();
+                ArmorPanel.Show();
+                CurrencyPanel.Hide();
                 FoodPanel.Hide();
-                HealthAmountPerTick.Text = "0";
-                ManaAmountPerTick.Text = "0";
-                FullDuration.Text = "0";
-                ArmorPanel.Hide();
-                ArmorTypeComboBox.SelectedIndex = 0;
-                ArmorAmountTextBox.Text = "0";
+                ToolPanel.Hide();
+                WeaponPanel.Hide();
             }
             if (ItemTypeDropdownBox.SelectedIndex == 2)
             {
-                WeaponPanel.Hide();
-                WeaponTypeComboBox.SelectedIndex = 0;
-                DamageAmountTextBox.Text = "0";
-                FoodPanel.Show();
+                AmmoPanel.Hide();
                 ArmorPanel.Hide();
-                ArmorTypeComboBox.SelectedIndex = 0;
-                ArmorAmountTextBox.Text = "0";
-            }
-            if(ItemTypeDropdownBox.SelectedIndex >= 3)
-            {
-                WeaponPanel.Hide();
-                WeaponTypeComboBox.SelectedIndex = 0;
-                DamageAmountTextBox.Text = "0";
+                CurrencyPanel.Show();
                 FoodPanel.Hide();
-                HealthAmountPerTick.Text = "0";
-                ManaAmountPerTick.Text = "0";
-                FullDuration.Text = "0";
+                ToolPanel.Hide();
+                WeaponPanel.Hide();
+            }
+            if (ItemTypeDropdownBox.SelectedIndex == 3)
+            {
+                AmmoPanel.Hide();
                 ArmorPanel.Hide();
-                ArmorTypeComboBox.SelectedIndex = 0;
-                ArmorAmountTextBox.Text = "0";
+                CurrencyPanel.Hide();
+                FoodPanel.Show();
+                ToolPanel.Hide();
+                WeaponPanel.Hide();
+            }
+            if (ItemTypeDropdownBox.SelectedIndex == 4 || ItemTypeDropdownBox.SelectedIndex > 6)
+            {
+                AmmoPanel.Hide();
+                ArmorPanel.Hide();
+                CurrencyPanel.Hide();
+                FoodPanel.Hide();
+                ToolPanel.Hide();
+                WeaponPanel.Hide();
+            }
+            if (ItemTypeDropdownBox.SelectedIndex == 5)
+            {
+                AmmoPanel.Hide();
+                ArmorPanel.Hide();
+                CurrencyPanel.Hide();
+                FoodPanel.Hide();
+                ToolPanel.Show();
+                WeaponPanel.Hide();
+            }
+            if (ItemTypeDropdownBox.SelectedIndex == 6)
+            {
+                AmmoPanel.Hide();
+                ArmorPanel.Hide();
+                CurrencyPanel.Hide();
+                FoodPanel.Hide();
+                ToolPanel.Hide();
+                WeaponPanel.Show();
             }
         }
     }
