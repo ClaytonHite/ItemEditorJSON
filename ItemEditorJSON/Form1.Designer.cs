@@ -977,12 +977,12 @@ namespace ItemEditorJSON
             this.Controls.Add(this.label2);
             this.Controls.Add(this.ItemNameTextBox);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.WeaponPanel);
             this.Controls.Add(this.CurrencyPanel);
             this.Controls.Add(this.ToolPanel);
             this.Controls.Add(this.ArmorPanel);
             this.Controls.Add(this.AmmoPanel);
             this.Controls.Add(this.FoodPanel);
+            this.Controls.Add(this.WeaponPanel);
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Form1";
             this.Text = "Form1";

@@ -69,8 +69,9 @@ namespace ItemEditorJSON
                     new Armor(itemID, article, itemName, imageNumber, weight, stackable, armorType, itemArmor, price);
                     break;
                 case "Currency":
-                    new Currency();
-                        break;
+                    price = Convert.ToInt32(CurrencyPriceTextBox.Text);
+                    new Currency(itemID, article, itemName, imageNumber, weight, stackable, itemType, price);
+                    break;
                 case "Food":
                     int HAPT = Convert.ToInt32(HealthAmountPerTick.Text);
                     int MAPT = Convert.ToInt32(ManaAmountPerTick.Text);
