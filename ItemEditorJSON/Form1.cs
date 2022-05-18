@@ -30,7 +30,7 @@ namespace ItemEditorJSON
         }
         private void CurrentLoadedItemsListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Item SelectedItem = Item.ItemList[CurrentLoadedItemsListBox.SelectedIndex];
+            Item SelectedItem = Item.ItemList[CurrentLoadedItemsListBox.SelectedIndex].Clone();
             string itemType = SelectedItem.ItemType;
             ItemIDTextBox.Text = $"{SelectedItem.ID}";
             ArticleTextBox.Text = $"{SelectedItem.Article}";
@@ -39,20 +39,62 @@ namespace ItemEditorJSON
             ImageNumberTextBox.Text = $"{SelectedItem.ImageNumber}";
             ItemWeightTextBox.Text = $"{SelectedItem.Weight}";
             StackableBoolean.Checked = SelectedItem.Stackable;
+            pictureBox1.Image = (Image)Properties.Resources.ResourceManager.GetObject("_" + ImageNumberTextBox.Text);
             switch (itemType)
             {
                 case "Ammo":
+                    AmmoPanel.Show();
+                    ArmorPanel.Hide();
+                    CurrencyPanel.Hide();
+                    FoodPanel.Hide();
+                    ToolPanel.Hide();
+                    WeaponPanel.Hide();
+                    Ammo DisplayAmmo = Ammo.GetAmmo(SelectedItem.ID);
+                    DamageAmountTextBox.Text = $"{DisplayAmmo.Damage}";
+                    AmmoPriceTextBox.Text = $"{DisplayAmmo.Price}";
                     break;
                 case "Armor":
+                    AmmoPanel.Hide();
+                    ArmorPanel.Show();
+                    CurrencyPanel.Hide();
+                    FoodPanel.Hide();
+                    ToolPanel.Hide();
+                    WeaponPanel.Hide();
+                    Armor DisplayArmor = Armor.GetArmor(SelectedItem.ID);
+                    ArmorTypeComboBox.Text = $"{DisplayArmor.ArmorType}";
+                    ArmorPriceTextBox.Text = $"{DisplayArmor.Price}";
+                    ArmorAmountTextBox.Text = $"{DisplayArmor.ArmorAmount}";
                     break;
                 case "Currency":
+                    AmmoPanel.Hide();
+                    ArmorPanel.Hide();
+                    CurrencyPanel.Show();
+                    FoodPanel.Hide();
+                    ToolPanel.Hide();
+                    WeaponPanel.Hide();
+                    Currency DisplayCurrency = Currency.GetCurrency(SelectedItem.ID);
+                    CurrencyPriceTextBox.Text = $"{DisplayCurrency.Price}";
                     break;
                 case "Food":
+                    AmmoPanel.Hide();
+                    ArmorPanel.Hide();
+                    CurrencyPanel.Hide();
+                    FoodPanel.Show();
+                    ToolPanel.Hide();
+                    WeaponPanel.Hide();
+                    Food DisplayFood = Food.GetFood(SelectedItem.ID);
+                    CurrencyPriceTextBox.Text = $"{DisplayFood.Price}";
                     break;
                 case "Miscellaneous":
                     break;
                 case "Weapon":
-                    Weapon DisplayWeapon = (Weapon)SelectedItem.Clone();
+                    AmmoPanel.Hide();
+                    ArmorPanel.Hide();
+                    CurrencyPanel.Hide();
+                    FoodPanel.Hide();
+                    ToolPanel.Hide();
+                    WeaponPanel.Show();
+                    Weapon DisplayWeapon = Weapon.GetWeapon(SelectedItem.ID);
                     DamageAmountTextBox.Text = $"{DisplayWeapon.Damage}";
                     WeaponPriceTextBox.Text = $"{DisplayWeapon.Price}";
                     WeaponTwoHandedCheckBox.Checked = DisplayWeapon.Hands;

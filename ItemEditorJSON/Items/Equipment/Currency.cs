@@ -10,6 +10,7 @@ namespace ItemEditorJSON.Items.Equipment
     {
         public int Price { get; set; }
         public int AmountOfItem { get; set; }
+        public static List<Currency> Currencies = new List<Currency>();
         public Currency(int _id, string article, string _name, int _imageNumber, int _weight, bool _stackable, string _slotType, int _price) : base(_id, article, _name, _imageNumber, _weight, _stackable, _slotType)
         {
             Price = _price;
@@ -30,7 +31,19 @@ namespace ItemEditorJSON.Items.Equipment
                     _imageNumber = _imageNumber + 4;
                     break;
             }
+            Currencies.Add(this);
             RegisterItem(this);
+        }
+        public static Currency GetCurrency(int itemID)
+        {
+            foreach (Currency currency in Currencies)
+            {
+                if (currency.ID == itemID)
+                {
+                    return currency;
+                }
+            }
+            return null;
         }
     }
 }
