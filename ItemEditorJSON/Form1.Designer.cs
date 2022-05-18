@@ -55,6 +55,8 @@ namespace ItemEditorJSON
             this.LoadButton = new System.Windows.Forms.Button();
             this.SaveButton = new System.Windows.Forms.Button();
             this.ArmorPanel = new System.Windows.Forms.Panel();
+            this.ArmorPriceTextBox = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
             this.ArmorTypeComboBox = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.ArmorAmountTextBox = new System.Windows.Forms.TextBox();
@@ -63,21 +65,34 @@ namespace ItemEditorJSON
             this.label11 = new System.Windows.Forms.Label();
             this.ArticleTextBox = new System.Windows.Forms.TextBox();
             this.WeaponPanel = new System.Windows.Forms.Panel();
+            this.WeaponPriceTextBox = new System.Windows.Forms.TextBox();
+            this.WeaponTwoHandedCheckBox = new System.Windows.Forms.CheckBox();
+            this.label19 = new System.Windows.Forms.Label();
             this.WeaponTypeComboBox = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.DamageAmountTextBox = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.FoodPanel = new System.Windows.Forms.Panel();
+            this.ManaAmountPerTick = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.FullDuration = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
             this.HealthAmountPerTick = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.FullDuration = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.ManaAmountPerTick = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.ItemWeightTextBox = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.AmmoPriceTextBox = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.AmmoDamageTextBox = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.ArmorPanel.SuspendLayout();
             this.WeaponPanel.SuspendLayout();
             this.FoodPanel.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -89,7 +104,7 @@ namespace ItemEditorJSON
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(260, 40);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Item Name :";
+            this.label1.Text = "Name :";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ItemNameTextBox
@@ -111,7 +126,7 @@ namespace ItemEditorJSON
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(260, 40);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Item Type :";
+            this.label2.Text = "Type :";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label3
@@ -165,7 +180,7 @@ namespace ItemEditorJSON
             this.StackableBoolean.AutoSize = true;
             this.StackableBoolean.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StackableBoolean.ForeColor = System.Drawing.SystemColors.Control;
-            this.StackableBoolean.Location = new System.Drawing.Point(56, 228);
+            this.StackableBoolean.Location = new System.Drawing.Point(46, 257);
             this.StackableBoolean.Margin = new System.Windows.Forms.Padding(6);
             this.StackableBoolean.Name = "StackableBoolean";
             this.StackableBoolean.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -185,7 +200,7 @@ namespace ItemEditorJSON
             // 
             // LeftButtonImage
             // 
-            this.LeftButtonImage.Location = new System.Drawing.Point(296, 228);
+            this.LeftButtonImage.Location = new System.Drawing.Point(687, 209);
             this.LeftButtonImage.Margin = new System.Windows.Forms.Padding(6);
             this.LeftButtonImage.Name = "LeftButtonImage";
             this.LeftButtonImage.Size = new System.Drawing.Size(150, 44);
@@ -196,7 +211,7 @@ namespace ItemEditorJSON
             // 
             // RightButtonImage
             // 
-            this.RightButtonImage.Location = new System.Drawing.Point(458, 228);
+            this.RightButtonImage.Location = new System.Drawing.Point(862, 209);
             this.RightButtonImage.Margin = new System.Windows.Forms.Padding(6);
             this.RightButtonImage.Name = "RightButtonImage";
             this.RightButtonImage.Size = new System.Drawing.Size(150, 44);
@@ -362,6 +377,8 @@ namespace ItemEditorJSON
             // ArmorPanel
             // 
             this.ArmorPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.ArmorPanel.Controls.Add(this.ArmorPriceTextBox);
+            this.ArmorPanel.Controls.Add(this.label18);
             this.ArmorPanel.Controls.Add(this.ArmorTypeComboBox);
             this.ArmorPanel.Controls.Add(this.label10);
             this.ArmorPanel.Controls.Add(this.ArmorAmountTextBox);
@@ -370,6 +387,28 @@ namespace ItemEditorJSON
             this.ArmorPanel.Name = "ArmorPanel";
             this.ArmorPanel.Size = new System.Drawing.Size(577, 519);
             this.ArmorPanel.TabIndex = 26;
+            // 
+            // ArmorPriceTextBox
+            // 
+            this.ArmorPriceTextBox.BackColor = System.Drawing.Color.DarkGray;
+            this.ArmorPriceTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ArmorPriceTextBox.Location = new System.Drawing.Point(277, 113);
+            this.ArmorPriceTextBox.Margin = new System.Windows.Forms.Padding(6);
+            this.ArmorPriceTextBox.Name = "ArmorPriceTextBox";
+            this.ArmorPriceTextBox.Size = new System.Drawing.Size(250, 31);
+            this.ArmorPriceTextBox.TabIndex = 32;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.SystemColors.Control;
+            this.label18.Location = new System.Drawing.Point(54, 114);
+            this.label18.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(114, 37);
+            this.label18.TabIndex = 31;
+            this.label18.Text = "Price :";
             // 
             // ArmorTypeComboBox
             // 
@@ -407,7 +446,6 @@ namespace ItemEditorJSON
             this.ArmorAmountTextBox.Location = new System.Drawing.Point(277, 72);
             this.ArmorAmountTextBox.Margin = new System.Windows.Forms.Padding(6);
             this.ArmorAmountTextBox.Name = "ArmorAmountTextBox";
-            this.ArmorAmountTextBox.ReadOnly = true;
             this.ArmorAmountTextBox.Size = new System.Drawing.Size(250, 31);
             this.ArmorAmountTextBox.TabIndex = 8;
             // 
@@ -468,6 +506,10 @@ namespace ItemEditorJSON
             // WeaponPanel
             // 
             this.WeaponPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.WeaponPanel.Controls.Add(this.panel1);
+            this.WeaponPanel.Controls.Add(this.WeaponPriceTextBox);
+            this.WeaponPanel.Controls.Add(this.WeaponTwoHandedCheckBox);
+            this.WeaponPanel.Controls.Add(this.label19);
             this.WeaponPanel.Controls.Add(this.WeaponTypeComboBox);
             this.WeaponPanel.Controls.Add(this.label12);
             this.WeaponPanel.Controls.Add(this.DamageAmountTextBox);
@@ -476,6 +518,42 @@ namespace ItemEditorJSON
             this.WeaponPanel.Name = "WeaponPanel";
             this.WeaponPanel.Size = new System.Drawing.Size(577, 519);
             this.WeaponPanel.TabIndex = 30;
+            // 
+            // WeaponPriceTextBox
+            // 
+            this.WeaponPriceTextBox.BackColor = System.Drawing.Color.DarkGray;
+            this.WeaponPriceTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.WeaponPriceTextBox.Location = new System.Drawing.Point(310, 119);
+            this.WeaponPriceTextBox.Margin = new System.Windows.Forms.Padding(6);
+            this.WeaponPriceTextBox.Name = "WeaponPriceTextBox";
+            this.WeaponPriceTextBox.Size = new System.Drawing.Size(250, 31);
+            this.WeaponPriceTextBox.TabIndex = 35;
+            // 
+            // WeaponTwoHandedCheckBox
+            // 
+            this.WeaponTwoHandedCheckBox.AutoSize = true;
+            this.WeaponTwoHandedCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.WeaponTwoHandedCheckBox.ForeColor = System.Drawing.SystemColors.Control;
+            this.WeaponTwoHandedCheckBox.Location = new System.Drawing.Point(16, 157);
+            this.WeaponTwoHandedCheckBox.Margin = new System.Windows.Forms.Padding(6);
+            this.WeaponTwoHandedCheckBox.Name = "WeaponTwoHandedCheckBox";
+            this.WeaponTwoHandedCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.WeaponTwoHandedCheckBox.Size = new System.Drawing.Size(241, 41);
+            this.WeaponTwoHandedCheckBox.TabIndex = 34;
+            this.WeaponTwoHandedCheckBox.Text = "Two Handed";
+            this.WeaponTwoHandedCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.SystemColors.Control;
+            this.label19.Location = new System.Drawing.Point(88, 113);
+            this.label19.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(114, 37);
+            this.label19.TabIndex = 30;
+            this.label19.Text = "Price :";
             // 
             // WeaponTypeComboBox
             // 
@@ -510,7 +588,6 @@ namespace ItemEditorJSON
             this.DamageAmountTextBox.Location = new System.Drawing.Point(310, 72);
             this.DamageAmountTextBox.Margin = new System.Windows.Forms.Padding(6);
             this.DamageAmountTextBox.Name = "DamageAmountTextBox";
-            this.DamageAmountTextBox.ReadOnly = true;
             this.DamageAmountTextBox.Size = new System.Drawing.Size(250, 31);
             this.DamageAmountTextBox.TabIndex = 8;
             // 
@@ -540,6 +617,50 @@ namespace ItemEditorJSON
             this.FoodPanel.Size = new System.Drawing.Size(577, 519);
             this.FoodPanel.TabIndex = 31;
             // 
+            // ManaAmountPerTick
+            // 
+            this.ManaAmountPerTick.BackColor = System.Drawing.Color.DarkGray;
+            this.ManaAmountPerTick.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ManaAmountPerTick.Location = new System.Drawing.Point(277, 71);
+            this.ManaAmountPerTick.Margin = new System.Windows.Forms.Padding(6);
+            this.ManaAmountPerTick.Name = "ManaAmountPerTick";
+            this.ManaAmountPerTick.Size = new System.Drawing.Size(250, 31);
+            this.ManaAmountPerTick.TabIndex = 32;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.SystemColors.Control;
+            this.label14.Location = new System.Drawing.Point(6, 65);
+            this.label14.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(249, 37);
+            this.label14.TabIndex = 31;
+            this.label14.Text = "Mana Amount :";
+            // 
+            // FullDuration
+            // 
+            this.FullDuration.BackColor = System.Drawing.Color.DarkGray;
+            this.FullDuration.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.FullDuration.Location = new System.Drawing.Point(277, 120);
+            this.FullDuration.Margin = new System.Windows.Forms.Padding(6);
+            this.FullDuration.Name = "FullDuration";
+            this.FullDuration.Size = new System.Drawing.Size(250, 31);
+            this.FullDuration.TabIndex = 30;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.SystemColors.Control;
+            this.label16.Location = new System.Drawing.Point(6, 114);
+            this.label16.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(233, 37);
+            this.label16.TabIndex = 29;
+            this.label16.Text = "Full Duration :";
+            // 
             // HealthAmountPerTick
             // 
             this.HealthAmountPerTick.BackColor = System.Drawing.Color.DarkGray;
@@ -547,7 +668,6 @@ namespace ItemEditorJSON
             this.HealthAmountPerTick.Location = new System.Drawing.Point(277, 21);
             this.HealthAmountPerTick.Margin = new System.Windows.Forms.Padding(6);
             this.HealthAmountPerTick.Name = "HealthAmountPerTick";
-            this.HealthAmountPerTick.ReadOnly = true;
             this.HealthAmountPerTick.Size = new System.Drawing.Size(250, 31);
             this.HealthAmountPerTick.TabIndex = 8;
             // 
@@ -563,51 +683,111 @@ namespace ItemEditorJSON
             this.label15.TabIndex = 7;
             this.label15.Text = "Health Amount :";
             // 
-            // label16
+            // label17
             // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.SystemColors.Control;
-            this.label16.Location = new System.Drawing.Point(6, 114);
-            this.label16.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(233, 37);
-            this.label16.TabIndex = 29;
-            this.label16.Text = "Full Duration :";
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.SystemColors.Control;
+            this.label17.Location = new System.Drawing.Point(28, 216);
+            this.label17.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(260, 40);
+            this.label17.TabIndex = 32;
+            this.label17.Text = "Weight :";
+            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // FullDuration
+            // ItemWeightTextBox
             // 
-            this.FullDuration.BackColor = System.Drawing.Color.DarkGray;
-            this.FullDuration.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.FullDuration.Location = new System.Drawing.Point(277, 120);
-            this.FullDuration.Margin = new System.Windows.Forms.Padding(6);
-            this.FullDuration.Name = "FullDuration";
-            this.FullDuration.ReadOnly = true;
-            this.FullDuration.Size = new System.Drawing.Size(250, 31);
-            this.FullDuration.TabIndex = 30;
+            this.ItemWeightTextBox.BackColor = System.Drawing.Color.DarkGray;
+            this.ItemWeightTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ItemWeightTextBox.Location = new System.Drawing.Point(298, 228);
+            this.ItemWeightTextBox.Margin = new System.Windows.Forms.Padding(6);
+            this.ItemWeightTextBox.Name = "ItemWeightTextBox";
+            this.ItemWeightTextBox.Size = new System.Drawing.Size(310, 31);
+            this.ItemWeightTextBox.TabIndex = 33;
             // 
-            // label14
+            // panel1
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.SystemColors.Control;
-            this.label14.Location = new System.Drawing.Point(6, 65);
-            this.label14.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(249, 37);
-            this.label14.TabIndex = 31;
-            this.label14.Text = "Mana Amount :";
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.AmmoPriceTextBox);
+            this.panel1.Controls.Add(this.label20);
+            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.label21);
+            this.panel1.Controls.Add(this.AmmoDamageTextBox);
+            this.panel1.Controls.Add(this.label22);
+            this.panel1.Location = new System.Drawing.Point(0, -2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(577, 519);
+            this.panel1.TabIndex = 34;
             // 
-            // ManaAmountPerTick
+            // AmmoPriceTextBox
             // 
-            this.ManaAmountPerTick.BackColor = System.Drawing.Color.DarkGray;
-            this.ManaAmountPerTick.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ManaAmountPerTick.Location = new System.Drawing.Point(277, 71);
-            this.ManaAmountPerTick.Margin = new System.Windows.Forms.Padding(6);
-            this.ManaAmountPerTick.Name = "ManaAmountPerTick";
-            this.ManaAmountPerTick.ReadOnly = true;
-            this.ManaAmountPerTick.Size = new System.Drawing.Size(250, 31);
-            this.ManaAmountPerTick.TabIndex = 32;
+            this.AmmoPriceTextBox.BackColor = System.Drawing.Color.DarkGray;
+            this.AmmoPriceTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.AmmoPriceTextBox.Location = new System.Drawing.Point(310, 119);
+            this.AmmoPriceTextBox.Margin = new System.Windows.Forms.Padding(6);
+            this.AmmoPriceTextBox.Name = "AmmoPriceTextBox";
+            this.AmmoPriceTextBox.Size = new System.Drawing.Size(250, 31);
+            this.AmmoPriceTextBox.TabIndex = 35;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.ForeColor = System.Drawing.SystemColors.Control;
+            this.label20.Location = new System.Drawing.Point(88, 113);
+            this.label20.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(114, 37);
+            this.label20.TabIndex = 30;
+            this.label20.Text = "Price :";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.BackColor = System.Drawing.Color.DarkGray;
+            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Arrow",
+            "Bolt",
+            "Throwing Knife"});
+            this.comboBox1.Location = new System.Drawing.Point(258, 20);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(312, 33);
+            this.comboBox1.TabIndex = 28;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.ForeColor = System.Drawing.SystemColors.Control;
+            this.label21.Location = new System.Drawing.Point(6, 16);
+            this.label21.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(219, 37);
+            this.label21.TabIndex = 9;
+            this.label21.Text = "Ammo Type :";
+            // 
+            // AmmoDamageTextBox
+            // 
+            this.AmmoDamageTextBox.BackColor = System.Drawing.Color.DarkGray;
+            this.AmmoDamageTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.AmmoDamageTextBox.Location = new System.Drawing.Point(310, 72);
+            this.AmmoDamageTextBox.Margin = new System.Windows.Forms.Padding(6);
+            this.AmmoDamageTextBox.Name = "AmmoDamageTextBox";
+            this.AmmoDamageTextBox.Size = new System.Drawing.Size(250, 31);
+            this.AmmoDamageTextBox.TabIndex = 8;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.ForeColor = System.Drawing.SystemColors.Control;
+            this.label22.Location = new System.Drawing.Point(6, 66);
+            this.label22.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(292, 37);
+            this.label22.TabIndex = 7;
+            this.label22.Text = "Damage Amount :";
             // 
             // Form1
             // 
@@ -615,6 +795,8 @@ namespace ItemEditorJSON
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1600, 865);
+            this.Controls.Add(this.ItemWeightTextBox);
+            this.Controls.Add(this.label17);
             this.Controls.Add(this.ArticleTextBox);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.ItemTypeDropdownBox);
@@ -643,9 +825,9 @@ namespace ItemEditorJSON
             this.Controls.Add(this.label2);
             this.Controls.Add(this.ItemNameTextBox);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.WeaponPanel);
             this.Controls.Add(this.ArmorPanel);
             this.Controls.Add(this.FoodPanel);
-            this.Controls.Add(this.WeaponPanel);
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -656,6 +838,8 @@ namespace ItemEditorJSON
             this.WeaponPanel.PerformLayout();
             this.FoodPanel.ResumeLayout(false);
             this.FoodPanel.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -708,6 +892,20 @@ namespace ItemEditorJSON
         private System.Windows.Forms.Label label16;
         public System.Windows.Forms.TextBox HealthAmountPerTick;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label17;
+        public System.Windows.Forms.TextBox ItemWeightTextBox;
+        public System.Windows.Forms.TextBox WeaponPriceTextBox;
+        public System.Windows.Forms.CheckBox WeaponTwoHandedCheckBox;
+        private System.Windows.Forms.Label label19;
+        public System.Windows.Forms.TextBox ArmorPriceTextBox;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Panel panel1;
+        public System.Windows.Forms.TextBox AmmoPriceTextBox;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label21;
+        public System.Windows.Forms.TextBox AmmoDamageTextBox;
+        private System.Windows.Forms.Label label22;
     }
 }
 

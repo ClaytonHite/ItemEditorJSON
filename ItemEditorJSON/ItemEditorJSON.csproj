@@ -46,16 +46,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Attributes.cs" />
-    <Compile Include="EquipmentType.cs" />
+    <Compile Include="Items\Attributes\Attributes.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Item.cs" />
-    <Compile Include="ItemCreator.cs" />
+    <Compile Include="Items\Equipment\Ammo.cs" />
+    <Compile Include="Items\Equipment\Armor.cs" />
+    <Compile Include="Items\Equipment\Food.cs" />
+    <Compile Include="Items\Equipment\Miscellaneous.cs" />
+    <Compile Include="Items\Equipment\Weapon.cs" />
+    <Compile Include="Items\Item.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -147,5 +150,6 @@
   <ItemGroup>
     <None Include="Resources\1020.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

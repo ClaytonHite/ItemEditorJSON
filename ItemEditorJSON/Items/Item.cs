@@ -9,26 +9,21 @@ namespace ItemEditorJSON
     class Item
     {
         public int ID;
-        string Article;
+        public string Article;
         public string Name;
         public int Weight;
-        public EquipmentType equipmentType;
-        public Attributes Attributes;
         public int ImageNumber;
         public bool Stackable;
         public static List<Item> ItemList = new List<Item>();
         //healthAmountPerTick//healthTimeTicks//manaAmountPerTick//manaTimeTicks
-        public Item(int _id, string article, string _name, EquipmentType _equipmentType, Attributes _attributes, int _imageNumber, bool _stackable)
+        public Item(int _id, string article, string _name, int _imageNumber, int _weight, bool _stackable, string _slotType)
         {
             this.ID = _id;
             this.Article = article;
             this.Name = _name;
-            this.equipmentType = _equipmentType;
-            this.Attributes = _attributes;
             this.ImageNumber = _imageNumber;
+            this.Weight = _weight;
             this.Stackable = _stackable;
-
-            RegisterItem(this);
         }
         public void DestroySelf()
         {
