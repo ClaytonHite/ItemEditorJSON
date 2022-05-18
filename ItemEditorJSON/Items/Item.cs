@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ItemEditorJSON.Items.Equipment;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ItemEditorJSON
 {
-    class Item
+    public class Item
     {
         public int ID;
         public string Article;
@@ -14,6 +15,7 @@ namespace ItemEditorJSON
         public int Weight;
         public int ImageNumber;
         public bool Stackable;
+        public string ItemType;
         public static List<Item> ItemList = new List<Item>();
         //healthAmountPerTick//healthTimeTicks//manaAmountPerTick//manaTimeTicks
         public Item(int _id, string article, string _name, int _imageNumber, int _weight, bool _stackable, string _slotType)
@@ -24,6 +26,7 @@ namespace ItemEditorJSON
             this.ImageNumber = _imageNumber;
             this.Weight = _weight;
             this.Stackable = _stackable;
+            this.ItemType = _slotType;
         }
         public void DestroySelf()
         {
@@ -36,6 +39,10 @@ namespace ItemEditorJSON
         public void UnRegisterGameObject(Item _item)
         {
             ItemList.Remove(_item);
+        }
+        public Item Clone()
+        {
+            return new Item(ID,Article,Name,ImageNumber,Weight,Stackable,ItemType);
         }
     }
 }

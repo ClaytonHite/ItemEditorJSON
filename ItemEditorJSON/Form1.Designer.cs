@@ -40,16 +40,7 @@ namespace ItemEditorJSON
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.LeftButtonImage = new System.Windows.Forms.Button();
             this.RightButtonImage = new System.Windows.Forms.Button();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.DisplayImageNumberLabel = new System.Windows.Forms.Label();
-            this.DisplayItemTypeLabel = new System.Windows.Forms.Label();
-            this.DisplayItemNameLabel = new System.Windows.Forms.Label();
-            this.DisplayItemIDLabel = new System.Windows.Forms.Label();
+            this.CurrentLoadedItemsListBox = new System.Windows.Forms.ListBox();
             this.AddButton = new System.Windows.Forms.Button();
             this.DeleteButton = new System.Windows.Forms.Button();
             this.LoadButton = new System.Windows.Forms.Button();
@@ -98,8 +89,8 @@ namespace ItemEditorJSON
             this.ToolDamageTextBox = new System.Windows.Forms.TextBox();
             this.label26 = new System.Windows.Forms.Label();
             this.CurrencyPanel = new System.Windows.Forms.Panel();
-            this.label29 = new System.Windows.Forms.Label();
             this.CurrencyPriceTextBox = new System.Windows.Forms.TextBox();
+            this.label29 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.ArmorPanel.SuspendLayout();
             this.WeaponPanel.SuspendLayout();
@@ -234,118 +225,17 @@ namespace ItemEditorJSON
             this.RightButtonImage.UseVisualStyleBackColor = true;
             this.RightButtonImage.Click += new System.EventHandler(this.RightButtonImage_Click);
             // 
-            // listBox1
+            // CurrentLoadedItemsListBox
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 25;
-            this.listBox1.Location = new System.Drawing.Point(1080, 285);
-            this.listBox1.Margin = new System.Windows.Forms.Padding(6);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(492, 554);
-            this.listBox1.TabIndex = 12;
-            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.ForeColor = System.Drawing.SystemColors.Control;
-            this.checkBox1.Location = new System.Drawing.Point(1208, 212);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(6);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.checkBox1.Size = new System.Drawing.Size(198, 41);
-            this.checkBox1.TabIndex = 17;
-            this.checkBox1.Text = "Stackable";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.Control;
-            this.label5.Location = new System.Drawing.Point(1072, 167);
-            this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(251, 37);
-            this.label5.TabIndex = 16;
-            this.label5.Text = "ImageNumber :";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.Control;
-            this.label6.Location = new System.Drawing.Point(1072, 17);
-            this.label6.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(145, 37);
-            this.label6.TabIndex = 15;
-            this.label6.Text = "Item ID :";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.SystemColors.Control;
-            this.label7.Location = new System.Drawing.Point(1072, 117);
-            this.label7.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(186, 37);
-            this.label7.TabIndex = 14;
-            this.label7.Text = "Item Type :";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.SystemColors.Control;
-            this.label8.Location = new System.Drawing.Point(1072, 67);
-            this.label8.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(202, 37);
-            this.label8.TabIndex = 13;
-            this.label8.Text = "Item Name :";
-            // 
-            // DisplayImageNumberLabel
-            // 
-            this.DisplayImageNumberLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DisplayImageNumberLabel.ForeColor = System.Drawing.SystemColors.Control;
-            this.DisplayImageNumberLabel.Location = new System.Drawing.Point(1346, 167);
-            this.DisplayImageNumberLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.DisplayImageNumberLabel.Name = "DisplayImageNumberLabel";
-            this.DisplayImageNumberLabel.Size = new System.Drawing.Size(230, 38);
-            this.DisplayImageNumberLabel.TabIndex = 18;
-            // 
-            // DisplayItemTypeLabel
-            // 
-            this.DisplayItemTypeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DisplayItemTypeLabel.ForeColor = System.Drawing.SystemColors.Control;
-            this.DisplayItemTypeLabel.Location = new System.Drawing.Point(1346, 117);
-            this.DisplayItemTypeLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.DisplayItemTypeLabel.Name = "DisplayItemTypeLabel";
-            this.DisplayItemTypeLabel.Size = new System.Drawing.Size(230, 38);
-            this.DisplayItemTypeLabel.TabIndex = 19;
-            // 
-            // DisplayItemNameLabel
-            // 
-            this.DisplayItemNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DisplayItemNameLabel.ForeColor = System.Drawing.SystemColors.Control;
-            this.DisplayItemNameLabel.Location = new System.Drawing.Point(1346, 67);
-            this.DisplayItemNameLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.DisplayItemNameLabel.Name = "DisplayItemNameLabel";
-            this.DisplayItemNameLabel.Size = new System.Drawing.Size(230, 38);
-            this.DisplayItemNameLabel.TabIndex = 20;
-            // 
-            // DisplayItemIDLabel
-            // 
-            this.DisplayItemIDLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DisplayItemIDLabel.ForeColor = System.Drawing.SystemColors.Control;
-            this.DisplayItemIDLabel.Location = new System.Drawing.Point(1346, 17);
-            this.DisplayItemIDLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.DisplayItemIDLabel.Name = "DisplayItemIDLabel";
-            this.DisplayItemIDLabel.Size = new System.Drawing.Size(230, 38);
-            this.DisplayItemIDLabel.TabIndex = 21;
+            this.CurrentLoadedItemsListBox.BackColor = System.Drawing.Color.Gray;
+            this.CurrentLoadedItemsListBox.FormattingEnabled = true;
+            this.CurrentLoadedItemsListBox.ItemHeight = 25;
+            this.CurrentLoadedItemsListBox.Location = new System.Drawing.Point(1080, 10);
+            this.CurrentLoadedItemsListBox.Margin = new System.Windows.Forms.Padding(6);
+            this.CurrentLoadedItemsListBox.Name = "CurrentLoadedItemsListBox";
+            this.CurrentLoadedItemsListBox.Size = new System.Drawing.Size(492, 829);
+            this.CurrentLoadedItemsListBox.TabIndex = 12;
+            this.CurrentLoadedItemsListBox.SelectedIndexChanged += new System.EventHandler(this.CurrentLoadedItemsListBox_SelectedIndexChanged);
             // 
             // AddButton
             // 
@@ -919,6 +809,16 @@ namespace ItemEditorJSON
             this.CurrencyPanel.Size = new System.Drawing.Size(577, 519);
             this.CurrencyPanel.TabIndex = 37;
             // 
+            // CurrencyPriceTextBox
+            // 
+            this.CurrencyPriceTextBox.BackColor = System.Drawing.Color.DarkGray;
+            this.CurrencyPriceTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.CurrencyPriceTextBox.Location = new System.Drawing.Point(288, 18);
+            this.CurrencyPriceTextBox.Margin = new System.Windows.Forms.Padding(6);
+            this.CurrencyPriceTextBox.Name = "CurrencyPriceTextBox";
+            this.CurrencyPriceTextBox.Size = new System.Drawing.Size(250, 31);
+            this.CurrencyPriceTextBox.TabIndex = 32;
+            // 
             // label29
             // 
             this.label29.AutoSize = true;
@@ -930,16 +830,6 @@ namespace ItemEditorJSON
             this.label29.Size = new System.Drawing.Size(261, 37);
             this.label29.TabIndex = 7;
             this.label29.Text = "Currency Price :";
-            // 
-            // CurrencyPriceTextBox
-            // 
-            this.CurrencyPriceTextBox.BackColor = System.Drawing.Color.DarkGray;
-            this.CurrencyPriceTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.CurrencyPriceTextBox.Location = new System.Drawing.Point(288, 18);
-            this.CurrencyPriceTextBox.Margin = new System.Windows.Forms.Padding(6);
-            this.CurrencyPriceTextBox.Name = "CurrencyPriceTextBox";
-            this.CurrencyPriceTextBox.Size = new System.Drawing.Size(250, 31);
-            this.CurrencyPriceTextBox.TabIndex = 32;
             // 
             // Form1
             // 
@@ -956,16 +846,7 @@ namespace ItemEditorJSON
             this.Controls.Add(this.LoadButton);
             this.Controls.Add(this.DeleteButton);
             this.Controls.Add(this.AddButton);
-            this.Controls.Add(this.DisplayItemIDLabel);
-            this.Controls.Add(this.DisplayItemNameLabel);
-            this.Controls.Add(this.DisplayItemTypeLabel);
-            this.Controls.Add(this.DisplayImageNumberLabel);
-            this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.CurrentLoadedItemsListBox);
             this.Controls.Add(this.RightButtonImage);
             this.Controls.Add(this.LeftButtonImage);
             this.Controls.Add(this.pictureBox1);
@@ -1013,16 +894,7 @@ namespace ItemEditorJSON
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button LeftButtonImage;
         private System.Windows.Forms.Button RightButtonImage;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label DisplayImageNumberLabel;
-        private System.Windows.Forms.Label DisplayItemTypeLabel;
-        private System.Windows.Forms.Label DisplayItemNameLabel;
-        private System.Windows.Forms.Label DisplayItemIDLabel;
+        private System.Windows.Forms.ListBox CurrentLoadedItemsListBox;
         private System.Windows.Forms.Button AddButton;
         private System.Windows.Forms.Button DeleteButton;
         private System.Windows.Forms.Button LoadButton;

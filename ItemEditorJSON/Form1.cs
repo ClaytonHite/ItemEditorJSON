@@ -28,9 +28,37 @@ namespace ItemEditorJSON
             ItemIDTextBox.Text = ImageNumberTextBox.Text;
             pictureBox1.Image = (Image)Properties.Resources.ResourceManager.GetObject("_" + ImageNumberTextBox.Text);
         }
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void CurrentLoadedItemsListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            Item SelectedItem = Item.ItemList[CurrentLoadedItemsListBox.SelectedIndex];
+            string itemType = SelectedItem.ItemType;
+            ItemIDTextBox.Text = $"{SelectedItem.ID}";
+            ArticleTextBox.Text = $"{SelectedItem.Article}";
+            ItemNameTextBox.Text = $"{SelectedItem.Name}";
+            ItemTypeDropdownBox.Text = $"{SelectedItem.ItemType}";
+            ImageNumberTextBox.Text = $"{SelectedItem.ImageNumber}";
+            ItemWeightTextBox.Text = $"{SelectedItem.Weight}";
+            StackableBoolean.Checked = SelectedItem.Stackable;
+            switch (itemType)
+            {
+                case "Ammo":
+                    break;
+                case "Armor":
+                    break;
+                case "Currency":
+                    break;
+                case "Food":
+                    break;
+                case "Miscellaneous":
+                    break;
+                case "Weapon":
+                    Weapon DisplayWeapon = (Weapon)SelectedItem.Clone();
+                    DamageAmountTextBox.Text = $"{DisplayWeapon.Damage}";
+                    WeaponPriceTextBox.Text = $"{DisplayWeapon.Price}";
+                    WeaponTwoHandedCheckBox.Checked = DisplayWeapon.Hands;
+                    WeaponTypeComboBox.Text = $"{DisplayWeapon.WeaponType}";
+                    break;
+            }
         }
         private void LeftButtonImage_Click(object sender, EventArgs e)
         {
@@ -76,7 +104,7 @@ namespace ItemEditorJSON
                     armorType = ArmorTypeComboBox.Text;
                     price = Convert.ToInt32(ArmorPriceTextBox.Text);
                     int itemArmor = Convert.ToInt32(ArmorAmountTextBox.Text);
-                    new Armor(itemID, article, itemName, imageNumber, weight, stackable, armorType, itemArmor, price);
+                    new Armor(itemID, article, itemName, imageNumber, weight, stackable, itemType, armorType, itemArmor, price);
                     break;
                 case "Currency":
                     price = Convert.ToInt32(CurrencyPriceTextBox.Text);
@@ -97,17 +125,17 @@ namespace ItemEditorJSON
                     price = Convert.ToInt32(WeaponPriceTextBox.Text);
                     bool hands = WeaponTwoHandedCheckBox.Checked;
                     weaponType = WeaponTypeComboBox.Text;
-                    new Weapon(itemID, article, itemName, imageNumber, weight, stackable, weaponType, itemDamage, hands, price);
+                    new Weapon(itemID, article, itemName, imageNumber, weight, stackable, itemType, weaponType, itemDamage, hands, price);
                     break;
             }
             RefreshItemList();
         }
         void RefreshItemList()
         {
-            listBox1.Items.Clear();
+            CurrentLoadedItemsListBox.Items.Clear();
             foreach (Item item in Item.ItemList)
             {
-                listBox1.Items.Add($"{item.ID} -- Name = {item.Name}");
+                CurrentLoadedItemsListBox.Items.Add($"{item.ID} -- Name = {item.Name}");
             }
         }
 
