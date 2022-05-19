@@ -1,9 +1,12 @@
 ﻿using ItemEditorJSON.Items.Equipment;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -89,6 +92,18 @@ namespace ItemEditorJSON
                         break;
                     case "Miscellaneous":
                         break;
+                    case "Tool":
+                        AmmoPanel.Hide();
+                        ArmorPanel.Hide();
+                        CurrencyPanel.Hide();
+                        FoodPanel.Hide();
+                        ToolPanel.Show();
+                        WeaponPanel.Hide();
+                        Tool DisplayTool = Tool.GetTool(SelectedItem.ID);
+                        ToolPriceTextBox.Text = $"{DisplayTool.Price}";
+                        ToolDamageTextBox.Text = $"{DisplayTool.ToolDamage}";
+                        ToolTypeComboBox.SelectedItem = $"{DisplayTool.ToolType}";
+                        break;
                     case "Weapon":
                         AmmoPanel.Hide();
                         ArmorPanel.Hide();
@@ -164,6 +179,12 @@ namespace ItemEditorJSON
                     break;
                 case "Miscellaneous":
                     new Miscellaneous(itemID, article, itemName, imageNumber, weight, stackable, itemType);
+                    break;
+                case "Tool":
+                    price = Convert.ToInt32(ToolPriceTextBox.Text);
+                    int toolDamage = Convert.ToInt32(ToolDamageTextBox.Text);
+                    string toolType = ToolTypeComboBox.Text;
+                    new Tool(itemID, article, itemName, imageNumber, weight, stackable, itemType, toolType, toolDamage, price);
                     break;
                 case "Weapon":
                     itemDamage = Convert.ToInt32(DamageAmountTextBox.Text);
@@ -284,19 +305,51 @@ namespace ItemEditorJSON
                     case "Miscellaneous":
                         SelectedItem.DestroySelf();
                         break;
+                    case "Tool":
+                        Tool DisplayTool = Tool.GetTool(SelectedItem.ID);
+                        DisplayTool.DestroySelf();
+                        break;
                     case "Weapon":
                         Weapon DisplayWeapon = Weapon.GetWeapon(SelectedItem.ID);
                         DisplayWeapon.DestroySelf();
                         break;
                 }
-                SelectedItem.DestroySelf();
+                if (SelectedItem != null)
+                {
+                    SelectedItem.DestroySelf();
+                }
                 RefreshItemList();
             }
         }
 
         private void SaveButton_Click(object sender, EventArgs e)
         {
-            var json = JsonSerializer.Serialize(ItemList)
+            using (StreamWriter file = File.CreateText(@".\ItemsJSON\Items.json"))
+            {
+                JsonSerializer serializer = new JsonSerializer();
+                serializer.Serialize(file, Ammo.ammoList);
+                serializer.Serialize(file, Armor.Armors);
+                serializer.Serialize(file, Currency.Currencies);
+                serializer.Serialize(file, Food.Foods);
+                serializer.Serialize(file, Miscellaneous.miscellaneousList);
+                serializer.Serialize(file, Tool.Tools);
+                serializer.Serialize(file, Weapon.Weapons);
+            }
+        }
+
+        private void LoadButton_Click(object sender, EventArgs e)
+        {
+            using (StreamReader file = File.OpenText(@"C:\Users\Clayt\source\repos\ItemEditorJSON\Items.json"))
+            {
+                JsonSerializer serializer = new JsonSerializer();
+                Ammo ammunition = (Ammo)serializer.Deserialize(file, typeof(Ammo));
+                Armor armor = (Armor)serializer.Deserialize(file, typeof(Armor));
+                Currency currency = (Currency)serializer.Deserialize(file, typeof(Currency));
+                Food food = (Food)serializer.Deserialize(file, typeof(Food));
+                Miscellaneous miscellaneous = (Miscellaneous)serializer.Deserialize(file, typeof(Miscellaneous));
+                Tool tool = (Tool)serializer.Deserialize(file, typeof(Tool));
+                Weapon weapon = (Weapon)serializer.Deserialize(file, typeof(Weapon));
+            }
         }
     }
 }

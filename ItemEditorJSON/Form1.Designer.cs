@@ -268,6 +268,7 @@ namespace ItemEditorJSON
             this.LoadButton.TabIndex = 24;
             this.LoadButton.Text = "Load";
             this.LoadButton.UseVisualStyleBackColor = true;
+            this.LoadButton.Click += new System.EventHandler(this.LoadButton_Click);
             // 
             // SaveButton
             // 
@@ -759,6 +760,7 @@ namespace ItemEditorJSON
             this.ToolTypeComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ToolTypeComboBox.FormattingEnabled = true;
             this.ToolTypeComboBox.Items.AddRange(new object[] {
+            "Shovel",
             "Forestry",
             "Mining",
             "Cooking"});
@@ -860,12 +862,12 @@ namespace ItemEditorJSON
             this.Controls.Add(this.label2);
             this.Controls.Add(this.ItemNameTextBox);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.CurrencyPanel);
             this.Controls.Add(this.ToolPanel);
             this.Controls.Add(this.ArmorPanel);
             this.Controls.Add(this.AmmoPanel);
             this.Controls.Add(this.FoodPanel);
             this.Controls.Add(this.WeaponPanel);
+            this.Controls.Add(this.CurrencyPanel);
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Form1";
             this.Text = "Form1";
