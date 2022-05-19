@@ -327,29 +327,88 @@ namespace ItemEditorJSON
             using (StreamWriter file = File.CreateText(@".\ItemsJSON\Items.json"))
             {
                 JsonSerializer serializer = new JsonSerializer();
+                serializer.Serialize(file, Item.ItemList);
+            }
+            using (StreamWriter file = File.CreateText(@".\ItemsJSON\Ammos.json"))
+            {
+                JsonSerializer serializer = new JsonSerializer();
                 serializer.Serialize(file, Ammo.ammoList);
+            }
+            using (StreamWriter file = File.CreateText(@".\ItemsJSON\Armors.json"))
+            {
+                JsonSerializer serializer = new JsonSerializer();
                 serializer.Serialize(file, Armor.Armors);
+            }
+            using (StreamWriter file = File.CreateText(@".\ItemsJSON\Currency.json"))
+            {
+                JsonSerializer serializer = new JsonSerializer();
                 serializer.Serialize(file, Currency.Currencies);
+            }
+            using (StreamWriter file = File.CreateText(@".\ItemsJSON\Foods.json"))
+            {
+                JsonSerializer serializer = new JsonSerializer();
                 serializer.Serialize(file, Food.Foods);
+            }
+            using (StreamWriter file = File.CreateText(@".\ItemsJSON\Miscellaneous.json"))
+            {
+                JsonSerializer serializer = new JsonSerializer();
                 serializer.Serialize(file, Miscellaneous.miscellaneousList);
+            }
+            using (StreamWriter file = File.CreateText(@".\ItemsJSON\Tools.json"))
+            {
+                JsonSerializer serializer = new JsonSerializer();
                 serializer.Serialize(file, Tool.Tools);
+            }
+            using (StreamWriter file = File.CreateText(@".\ItemsJSON\Weapons.json"))
+            {
+                JsonSerializer serializer = new JsonSerializer();
                 serializer.Serialize(file, Weapon.Weapons);
             }
         }
 
         private void LoadButton_Click(object sender, EventArgs e)
         {
-            using (StreamReader file = File.OpenText(@"C:\Users\Clayt\source\repos\ItemEditorJSON\Items.json"))
+            using (StreamReader file = new StreamReader(@".\ItemsJSON\Items.json"))
             {
-                JsonSerializer serializer = new JsonSerializer();
-                Ammo ammunition = (Ammo)serializer.Deserialize(file, typeof(Ammo));
-                Armor armor = (Armor)serializer.Deserialize(file, typeof(Armor));
-                Currency currency = (Currency)serializer.Deserialize(file, typeof(Currency));
-                Food food = (Food)serializer.Deserialize(file, typeof(Food));
-                Miscellaneous miscellaneous = (Miscellaneous)serializer.Deserialize(file, typeof(Miscellaneous));
-                Tool tool = (Tool)serializer.Deserialize(file, typeof(Tool));
-                Weapon weapon = (Weapon)serializer.Deserialize(file, typeof(Weapon));
+                string json = file.ReadToEnd();
+                Item.ItemList = JsonConvert.DeserializeObject<List<Item>>(json);
             }
+            using (StreamReader file = new StreamReader(@".\ItemsJSON\Ammos.json"))
+            {
+                string json = file.ReadToEnd();
+                Ammo.ammoList = JsonConvert.DeserializeObject<List<Ammo>>(json);
+            }
+            using (StreamReader file = new StreamReader(@".\ItemsJSON\Armors.json"))
+            {
+                string json = file.ReadToEnd();
+                Armor.Armors = JsonConvert.DeserializeObject<List<Armor>>(json);
+            }
+            using (StreamReader file = new StreamReader(@".\ItemsJSON\Currency.json"))
+            {
+                string json = file.ReadToEnd();
+                Currency.Currencies = JsonConvert.DeserializeObject<List<Currency>>(json);
+            }
+            using (StreamReader file = new StreamReader(@".\ItemsJSON\Foods.json"))
+            {
+                string json = file.ReadToEnd();
+                Food.Foods = JsonConvert.DeserializeObject<List<Food>>(json);
+            }
+            using (StreamReader file = new StreamReader(@".\ItemsJSON\Miscellaneous.json"))
+            {
+                string json = file.ReadToEnd();
+                Miscellaneous.miscellaneousList = JsonConvert.DeserializeObject<List<Miscellaneous>>(json);
+            }
+            using (StreamReader file = new StreamReader(@".\ItemsJSON\Tools.json"))
+            {
+                string json = file.ReadToEnd();
+                Tool.Tools = JsonConvert.DeserializeObject<List<Tool>>(json);
+            }
+            using (StreamReader file = new StreamReader(@".\ItemsJSON\Weapons.json"))
+            {
+                string json = file.ReadToEnd();
+                Weapon.Weapons = JsonConvert.DeserializeObject<List<Weapon>>(json);
+            }
+            RefreshItemList();
         }
     }
 }
