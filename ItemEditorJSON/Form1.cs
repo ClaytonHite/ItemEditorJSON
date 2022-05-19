@@ -293,5 +293,10 @@ namespace ItemEditorJSON
                 RefreshItemList();
             }
         }
+
+        private void SaveButton_Click(object sender, EventArgs e)
+        {
+            var json = JsonSerializer.Serialize(ItemList)
+        }
     }
 }
