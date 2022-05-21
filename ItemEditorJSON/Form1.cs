@@ -16,7 +16,7 @@ namespace ItemEditorJSON
 {
     public partial class Form1 : Form
     {
-        int numberOfImages = 21;
+        int numberOfImages = 34;
         public Form1()
         {
             InitializeComponent();
