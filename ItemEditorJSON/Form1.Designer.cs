@@ -63,8 +63,8 @@ namespace ItemEditorJSON
             this.label12 = new System.Windows.Forms.Label();
             this.DamageAmountTextBox = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.FoodPanel = new System.Windows.Forms.Panel();
-            this.FoodPriceTextBox = new System.Windows.Forms.TextBox();
+            this.ConsumablePanel = new System.Windows.Forms.Panel();
+            this.ConsumablePriceTextBox = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
             this.ManaAmountPerTick = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
@@ -94,7 +94,7 @@ namespace ItemEditorJSON
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.ArmorPanel.SuspendLayout();
             this.WeaponPanel.SuspendLayout();
-            this.FoodPanel.SuspendLayout();
+            this.ConsumablePanel.SuspendLayout();
             this.AmmoPanel.SuspendLayout();
             this.ToolPanel.SuspendLayout();
             this.CurrencyPanel.SuspendLayout();
@@ -328,7 +328,8 @@ namespace ItemEditorJSON
             "Gloves",
             "Legs",
             "Feet",
-            ""});
+            "Shield",
+            "Ring"});
             this.ArmorTypeComboBox.Location = new System.Drawing.Point(230, 20);
             this.ArmorTypeComboBox.Name = "ArmorTypeComboBox";
             this.ArmorTypeComboBox.Size = new System.Drawing.Size(312, 33);
@@ -377,7 +378,7 @@ namespace ItemEditorJSON
             "Ammo",
             "Armor",
             "Currency",
-            "Food",
+            "Consumable",
             "Miscellaneous",
             "Tool",
             "Weapon"});
@@ -509,31 +510,31 @@ namespace ItemEditorJSON
             this.label13.TabIndex = 7;
             this.label13.Text = "Damage Amount :";
             // 
-            // FoodPanel
+            // ConsumablePanel
             // 
-            this.FoodPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.FoodPanel.Controls.Add(this.FoodPriceTextBox);
-            this.FoodPanel.Controls.Add(this.label20);
-            this.FoodPanel.Controls.Add(this.ManaAmountPerTick);
-            this.FoodPanel.Controls.Add(this.label14);
-            this.FoodPanel.Controls.Add(this.FullDuration);
-            this.FoodPanel.Controls.Add(this.label16);
-            this.FoodPanel.Controls.Add(this.HealthAmountPerTick);
-            this.FoodPanel.Controls.Add(this.label15);
-            this.FoodPanel.Location = new System.Drawing.Point(35, 340);
-            this.FoodPanel.Name = "FoodPanel";
-            this.FoodPanel.Size = new System.Drawing.Size(577, 519);
-            this.FoodPanel.TabIndex = 31;
+            this.ConsumablePanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.ConsumablePanel.Controls.Add(this.ConsumablePriceTextBox);
+            this.ConsumablePanel.Controls.Add(this.label20);
+            this.ConsumablePanel.Controls.Add(this.ManaAmountPerTick);
+            this.ConsumablePanel.Controls.Add(this.label14);
+            this.ConsumablePanel.Controls.Add(this.FullDuration);
+            this.ConsumablePanel.Controls.Add(this.label16);
+            this.ConsumablePanel.Controls.Add(this.HealthAmountPerTick);
+            this.ConsumablePanel.Controls.Add(this.label15);
+            this.ConsumablePanel.Location = new System.Drawing.Point(35, 340);
+            this.ConsumablePanel.Name = "ConsumablePanel";
+            this.ConsumablePanel.Size = new System.Drawing.Size(577, 519);
+            this.ConsumablePanel.TabIndex = 31;
             // 
-            // FoodPriceTextBox
+            // ConsumablePriceTextBox
             // 
-            this.FoodPriceTextBox.BackColor = System.Drawing.Color.DarkGray;
-            this.FoodPriceTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.FoodPriceTextBox.Location = new System.Drawing.Point(277, 167);
-            this.FoodPriceTextBox.Margin = new System.Windows.Forms.Padding(6);
-            this.FoodPriceTextBox.Name = "FoodPriceTextBox";
-            this.FoodPriceTextBox.Size = new System.Drawing.Size(250, 31);
-            this.FoodPriceTextBox.TabIndex = 34;
+            this.ConsumablePriceTextBox.BackColor = System.Drawing.Color.DarkGray;
+            this.ConsumablePriceTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ConsumablePriceTextBox.Location = new System.Drawing.Point(277, 167);
+            this.ConsumablePriceTextBox.Margin = new System.Windows.Forms.Padding(6);
+            this.ConsumablePriceTextBox.Name = "ConsumablePriceTextBox";
+            this.ConsumablePriceTextBox.Size = new System.Drawing.Size(250, 31);
+            this.ConsumablePriceTextBox.TabIndex = 34;
             // 
             // label20
             // 
@@ -863,12 +864,12 @@ namespace ItemEditorJSON
             this.Controls.Add(this.label2);
             this.Controls.Add(this.ItemNameTextBox);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.ArmorPanel);
             this.Controls.Add(this.AmmoPanel);
-            this.Controls.Add(this.FoodPanel);
+            this.Controls.Add(this.ConsumablePanel);
             this.Controls.Add(this.WeaponPanel);
             this.Controls.Add(this.CurrencyPanel);
             this.Controls.Add(this.ToolPanel);
-            this.Controls.Add(this.ArmorPanel);
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -877,8 +878,8 @@ namespace ItemEditorJSON
             this.ArmorPanel.PerformLayout();
             this.WeaponPanel.ResumeLayout(false);
             this.WeaponPanel.PerformLayout();
-            this.FoodPanel.ResumeLayout(false);
-            this.FoodPanel.PerformLayout();
+            this.ConsumablePanel.ResumeLayout(false);
+            this.ConsumablePanel.PerformLayout();
             this.AmmoPanel.ResumeLayout(false);
             this.AmmoPanel.PerformLayout();
             this.ToolPanel.ResumeLayout(false);
@@ -921,7 +922,7 @@ namespace ItemEditorJSON
         private System.Windows.Forms.Label label12;
         public System.Windows.Forms.TextBox DamageAmountTextBox;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Panel FoodPanel;
+        private System.Windows.Forms.Panel ConsumablePanel;
         public System.Windows.Forms.TextBox ManaAmountPerTick;
         private System.Windows.Forms.Label label14;
         public System.Windows.Forms.TextBox FullDuration;
@@ -942,7 +943,7 @@ namespace ItemEditorJSON
         private System.Windows.Forms.Label label24;
         public System.Windows.Forms.TextBox AmmoDamageAmountTextBox;
         private System.Windows.Forms.Label label25;
-        public System.Windows.Forms.TextBox FoodPriceTextBox;
+        public System.Windows.Forms.TextBox ConsumablePriceTextBox;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Panel ToolPanel;
         public System.Windows.Forms.TextBox ToolPriceTextBox;

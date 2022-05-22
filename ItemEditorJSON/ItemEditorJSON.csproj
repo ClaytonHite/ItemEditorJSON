@@ -60,7 +60,7 @@
     <Compile Include="Items\Equipment\Ammo.cs" />
     <Compile Include="Items\Equipment\Armor.cs" />
     <Compile Include="Items\Equipment\Currency.cs" />
-    <Compile Include="Items\Equipment\Food.cs" />
+    <Compile Include="Items\Equipment\Consumables.cs" />
     <Compile Include="Items\Equipment\Miscellaneous.cs" />
     <Compile Include="Items\Equipment\Tool.cs" />
     <Compile Include="Items\Equipment\Weapon.cs" />

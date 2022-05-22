@@ -17,7 +17,7 @@ namespace ItemEditorJSON
         public WeaponAttributes(int _id, string article, string _name, int _imageNumber, int _weight, bool _stackable, string _slotType, string _weaponType, int _damage, bool _hands, int _price, string magic, string material, int damage) : base(_id, article, _name, _imageNumber, _weight, _stackable, _slotType, _weaponType, _damage, _hands, _price)
         {
             this.MagicalAttributeString = magic;
-            this.MagicalAttributeString = material;
+            this.MaterialAttributeString = material;
             this.DamageAttribute = damage;
         }
     }

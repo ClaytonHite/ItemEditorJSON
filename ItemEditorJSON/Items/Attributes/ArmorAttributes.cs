@@ -17,7 +17,7 @@ namespace ItemEditorJSON
         public ArmorAttributes(int _id, string article, string _name, int _imageNumber, int _weight, bool _stackable, string _slotType, string _armorType, int _armor, int _price, string magic, string material, int armor) : base(_id, article, _name, _imageNumber, _weight, _stackable, _slotType, _armorType, _armor, _price)
         {
             this.MagicalAttributeString = magic;
-            this.MagicalAttributeString = material;
+            this.MaterialAttributeString = material;
             this.ArmorAttribute = armor;
         }
     }

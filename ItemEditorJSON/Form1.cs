@@ -23,7 +23,7 @@ namespace ItemEditorJSON
             ImageNumberTextBox.Text = "1";
             WeaponPanel.Hide();
             ArmorPanel.Hide();
-            FoodPanel.Hide();
+            ConsumablePanel.Hide();
             AmmoPanel.Hide();
             ToolPanel.Hide();
             CurrencyPanel.Hide();
@@ -51,7 +51,7 @@ namespace ItemEditorJSON
                         AmmoPanel.Show();
                         ArmorPanel.Hide();
                         CurrencyPanel.Hide();
-                        FoodPanel.Hide();
+                        ConsumablePanel.Hide();
                         ToolPanel.Hide();
                         WeaponPanel.Hide();
                         Ammo DisplayAmmo = Ammo.GetAmmo(SelectedItem.ID);
@@ -62,7 +62,7 @@ namespace ItemEditorJSON
                         AmmoPanel.Hide();
                         ArmorPanel.Show();
                         CurrencyPanel.Hide();
-                        FoodPanel.Hide();
+                        ConsumablePanel.Hide();
                         ToolPanel.Hide();
                         WeaponPanel.Hide();
                         Armor DisplayArmor = Armor.GetArmor(SelectedItem.ID);
@@ -74,21 +74,21 @@ namespace ItemEditorJSON
                         AmmoPanel.Hide();
                         ArmorPanel.Hide();
                         CurrencyPanel.Show();
-                        FoodPanel.Hide();
+                        ConsumablePanel.Hide();
                         ToolPanel.Hide();
                         WeaponPanel.Hide();
                         Currency DisplayCurrency = Currency.GetCurrency(SelectedItem.ID);
                         CurrencyPriceTextBox.Text = $"{DisplayCurrency.Price}";
                         break;
-                    case "Food":
+                    case "Consumable":
                         AmmoPanel.Hide();
                         ArmorPanel.Hide();
                         CurrencyPanel.Hide();
-                        FoodPanel.Show();
+                        ConsumablePanel.Show();
                         ToolPanel.Hide();
                         WeaponPanel.Hide();
-                        Food DisplayFood = Food.GetFood(SelectedItem.ID);
-                        CurrencyPriceTextBox.Text = $"{DisplayFood.Price}";
+                        Consumable DisplayConsumable = Consumable.GetConsumable(SelectedItem.ID);
+                        CurrencyPriceTextBox.Text = $"{DisplayConsumable.Price}";
                         break;
                     case "Miscellaneous":
                         break;
@@ -96,7 +96,7 @@ namespace ItemEditorJSON
                         AmmoPanel.Hide();
                         ArmorPanel.Hide();
                         CurrencyPanel.Hide();
-                        FoodPanel.Hide();
+                        ConsumablePanel.Hide();
                         ToolPanel.Show();
                         WeaponPanel.Hide();
                         Tool DisplayTool = Tool.GetTool(SelectedItem.ID);
@@ -108,7 +108,7 @@ namespace ItemEditorJSON
                         AmmoPanel.Hide();
                         ArmorPanel.Hide();
                         CurrencyPanel.Hide();
-                        FoodPanel.Hide();
+                        ConsumablePanel.Hide();
                         ToolPanel.Hide();
                         WeaponPanel.Show();
                         Weapon DisplayWeapon = Weapon.GetWeapon(SelectedItem.ID);
@@ -170,12 +170,12 @@ namespace ItemEditorJSON
                     price = Convert.ToInt32(CurrencyPriceTextBox.Text);
                     new Currency(itemID, article, itemName, imageNumber, weight, stackable, itemType, price);
                     break;
-                case "Food":
+                case "Consumable":
                     int HAPT = Convert.ToInt32(HealthAmountPerTick.Text);
                     int MAPT = Convert.ToInt32(ManaAmountPerTick.Text);
                     int FD = Convert.ToInt32(FullDuration.Text);
-                    price = Convert.ToInt32(FoodPriceTextBox.Text);
-                    new Food(itemID, article, itemName, imageNumber, weight, stackable, itemType, HAPT, MAPT, FD, price);
+                    price = Convert.ToInt32(ConsumablePriceTextBox.Text);
+                    new Consumable(itemID, article, itemName, imageNumber, weight, stackable, itemType, HAPT, MAPT, FD, price);
                     break;
                 case "Miscellaneous":
                     new Miscellaneous(itemID, article, itemName, imageNumber, weight, stackable, itemType);
@@ -214,7 +214,7 @@ namespace ItemEditorJSON
                     AmmoPanel.Show();
                     ArmorPanel.Hide();
                     CurrencyPanel.Hide();
-                    FoodPanel.Hide();
+                    ConsumablePanel.Hide();
                     ToolPanel.Hide();
                     WeaponPanel.Hide();
                     break;
@@ -222,7 +222,7 @@ namespace ItemEditorJSON
                     AmmoPanel.Hide();
                     ArmorPanel.Show();
                     CurrencyPanel.Hide();
-                    FoodPanel.Hide();
+                    ConsumablePanel.Hide();
                     ToolPanel.Hide();
                     WeaponPanel.Hide();
                     break;
@@ -230,7 +230,7 @@ namespace ItemEditorJSON
                     AmmoPanel.Hide();
                     ArmorPanel.Hide();
                     CurrencyPanel.Show();
-                    FoodPanel.Hide();
+                    ConsumablePanel.Hide();
                     ToolPanel.Hide();
                     WeaponPanel.Hide();
                     break;
@@ -238,7 +238,7 @@ namespace ItemEditorJSON
                     AmmoPanel.Hide();
                     ArmorPanel.Hide();
                     CurrencyPanel.Hide();
-                    FoodPanel.Show();
+                    ConsumablePanel.Show();
                     ToolPanel.Hide();
                     WeaponPanel.Hide();
                     break;
@@ -246,7 +246,7 @@ namespace ItemEditorJSON
                     AmmoPanel.Hide();
                     ArmorPanel.Hide();
                     CurrencyPanel.Hide();
-                    FoodPanel.Hide();
+                    ConsumablePanel.Hide();
                     ToolPanel.Hide();
                     WeaponPanel.Hide();
                     break;
@@ -254,7 +254,7 @@ namespace ItemEditorJSON
                     AmmoPanel.Hide();
                     ArmorPanel.Hide();
                     CurrencyPanel.Hide();
-                    FoodPanel.Hide();
+                    ConsumablePanel.Hide();
                     ToolPanel.Show();
                     WeaponPanel.Hide();
                     break;
@@ -262,7 +262,7 @@ namespace ItemEditorJSON
                     AmmoPanel.Hide();
                     ArmorPanel.Hide();
                     CurrencyPanel.Hide();
-                    FoodPanel.Hide();
+                    ConsumablePanel.Hide();
                     ToolPanel.Hide();
                     WeaponPanel.Show();
                     break;
@@ -270,7 +270,7 @@ namespace ItemEditorJSON
                     AmmoPanel.Hide();
                     ArmorPanel.Hide();
                     CurrencyPanel.Hide();
-                    FoodPanel.Hide();
+                    ConsumablePanel.Hide();
                     ToolPanel.Hide();
                     WeaponPanel.Hide();
                     break;
@@ -290,7 +290,7 @@ namespace ItemEditorJSON
                         AmmoPanel.Hide();
                         ArmorPanel.Hide();
                         CurrencyPanel.Hide();
-                        FoodPanel.Hide();
+                        ConsumablePanel.Hide();
                         ToolPanel.Hide();
                         WeaponPanel.Hide();
                         switch (itemType)
@@ -307,9 +307,9 @@ namespace ItemEditorJSON
                                 Currency DisplayCurrency = Currency.GetCurrency(SelectedItem.ID);
                                 DisplayCurrency.DestroySelf();
                                 break;
-                            case "Food":
-                                Food DisplayFood = Food.GetFood(SelectedItem.ID);
-                                DisplayFood.DestroySelf();
+                            case "Consumable":
+                                Consumable DisplayConsumable = Consumable.GetConsumable(SelectedItem.ID);
+                                DisplayConsumable.DestroySelf();
                                 break;
                             case "Miscellaneous":
                                 SelectedItem.DestroySelf();
@@ -359,10 +359,10 @@ namespace ItemEditorJSON
                 JsonSerializer serializer = new JsonSerializer();
                 serializer.Serialize(file, Currency.Currencies);
             }
-            using (StreamWriter file = File.CreateText(@".\ItemsJSON\Foods.json"))
+            using (StreamWriter file = File.CreateText(@".\ItemsJSON\Consumables.json"))
             {
                 JsonSerializer serializer = new JsonSerializer();
-                serializer.Serialize(file, Food.Foods);
+                serializer.Serialize(file, Consumable.Consumables);
             }
             using (StreamWriter file = File.CreateText(@".\ItemsJSON\Miscellaneous.json"))
             {
@@ -398,10 +398,10 @@ namespace ItemEditorJSON
                 string json = file.ReadToEnd();
                 Currency.Currencies = JsonConvert.DeserializeObject<List<Currency>>(json);
             }
-            using (StreamReader file = new StreamReader(@".\ItemsJSON\Foods.json"))
+            using (StreamReader file = new StreamReader(@".\ItemsJSON\Consumables.json"))
             {
                 string json = file.ReadToEnd();
-                Food.Foods = JsonConvert.DeserializeObject<List<Food>>(json);
+                Consumable.Consumables = JsonConvert.DeserializeObject<List<Consumable>>(json);
             }
             using (StreamReader file = new StreamReader(@".\ItemsJSON\Miscellaneous.json"))
             {
