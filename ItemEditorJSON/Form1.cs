@@ -208,68 +208,72 @@ namespace ItemEditorJSON
 
         private void ItemTypeDropdownBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (ItemTypeDropdownBox.SelectedIndex == 0)
+            switch (ItemTypeDropdownBox.SelectedIndex)
             {
-                AmmoPanel.Show();
-                ArmorPanel.Hide();
-                CurrencyPanel.Hide();
-                FoodPanel.Hide();
-                ToolPanel.Hide();
-                WeaponPanel.Hide();
-            }
-            if (ItemTypeDropdownBox.SelectedIndex == 1)
-            {
-                AmmoPanel.Hide();
-                ArmorPanel.Show();
-                CurrencyPanel.Hide();
-                FoodPanel.Hide();
-                ToolPanel.Hide();
-                WeaponPanel.Hide();
-            }
-            if (ItemTypeDropdownBox.SelectedIndex == 2)
-            {
-                AmmoPanel.Hide();
-                ArmorPanel.Hide();
-                CurrencyPanel.Show();
-                FoodPanel.Hide();
-                ToolPanel.Hide();
-                WeaponPanel.Hide();
-            }
-            if (ItemTypeDropdownBox.SelectedIndex == 3)
-            {
-                AmmoPanel.Hide();
-                ArmorPanel.Hide();
-                CurrencyPanel.Hide();
-                FoodPanel.Show();
-                ToolPanel.Hide();
-                WeaponPanel.Hide();
-            }
-            if (ItemTypeDropdownBox.SelectedIndex == 4 || ItemTypeDropdownBox.SelectedIndex > 6)
-            {
-                AmmoPanel.Hide();
-                ArmorPanel.Hide();
-                CurrencyPanel.Hide();
-                FoodPanel.Hide();
-                ToolPanel.Hide();
-                WeaponPanel.Hide();
-            }
-            if (ItemTypeDropdownBox.SelectedIndex == 5)
-            {
-                AmmoPanel.Hide();
-                ArmorPanel.Hide();
-                CurrencyPanel.Hide();
-                FoodPanel.Hide();
-                ToolPanel.Show();
-                WeaponPanel.Hide();
-            }
-            if (ItemTypeDropdownBox.SelectedIndex == 6)
-            {
-                AmmoPanel.Hide();
-                ArmorPanel.Hide();
-                CurrencyPanel.Hide();
-                FoodPanel.Hide();
-                ToolPanel.Hide();
-                WeaponPanel.Show();
+                case 0:
+                    AmmoPanel.Show();
+                    ArmorPanel.Hide();
+                    CurrencyPanel.Hide();
+                    FoodPanel.Hide();
+                    ToolPanel.Hide();
+                    WeaponPanel.Hide();
+                    break;
+                case 1:
+                    AmmoPanel.Hide();
+                    ArmorPanel.Show();
+                    CurrencyPanel.Hide();
+                    FoodPanel.Hide();
+                    ToolPanel.Hide();
+                    WeaponPanel.Hide();
+                    break;
+                case 2:
+                    AmmoPanel.Hide();
+                    ArmorPanel.Hide();
+                    CurrencyPanel.Show();
+                    FoodPanel.Hide();
+                    ToolPanel.Hide();
+                    WeaponPanel.Hide();
+                    break;
+                case 3:
+                    AmmoPanel.Hide();
+                    ArmorPanel.Hide();
+                    CurrencyPanel.Hide();
+                    FoodPanel.Show();
+                    ToolPanel.Hide();
+                    WeaponPanel.Hide();
+                    break;
+                case 4:
+                    AmmoPanel.Hide();
+                    ArmorPanel.Hide();
+                    CurrencyPanel.Hide();
+                    FoodPanel.Hide();
+                    ToolPanel.Hide();
+                    WeaponPanel.Hide();
+                    break;
+                case 5:
+                    AmmoPanel.Hide();
+                    ArmorPanel.Hide();
+                    CurrencyPanel.Hide();
+                    FoodPanel.Hide();
+                    ToolPanel.Show();
+                    WeaponPanel.Hide();
+                    break;
+                case 6:
+                    AmmoPanel.Hide();
+                    ArmorPanel.Hide();
+                    CurrencyPanel.Hide();
+                    FoodPanel.Hide();
+                    ToolPanel.Hide();
+                    WeaponPanel.Show();
+                    break;
+                default:
+                    AmmoPanel.Hide();
+                    ArmorPanel.Hide();
+                    CurrencyPanel.Hide();
+                    FoodPanel.Hide();
+                    ToolPanel.Hide();
+                    WeaponPanel.Hide();
+                    break;
             }
         }
 
