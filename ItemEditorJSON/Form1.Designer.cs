@@ -468,7 +468,8 @@ namespace ItemEditorJSON
             this.WeaponTypeComboBox.Items.AddRange(new object[] {
             "Sword",
             "Axe",
-            "Club"});
+            "Club",
+            "Ranged"});
             this.WeaponTypeComboBox.Location = new System.Drawing.Point(258, 20);
             this.WeaponTypeComboBox.Name = "WeaponTypeComboBox";
             this.WeaponTypeComboBox.Size = new System.Drawing.Size(312, 33);
@@ -862,12 +863,12 @@ namespace ItemEditorJSON
             this.Controls.Add(this.label2);
             this.Controls.Add(this.ItemNameTextBox);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.ToolPanel);
-            this.Controls.Add(this.ArmorPanel);
             this.Controls.Add(this.AmmoPanel);
             this.Controls.Add(this.FoodPanel);
             this.Controls.Add(this.WeaponPanel);
             this.Controls.Add(this.CurrencyPanel);
+            this.Controls.Add(this.ToolPanel);
+            this.Controls.Add(this.ArmorPanel);
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Form1";
             this.Text = "Form1";
