@@ -199,6 +199,7 @@ namespace ItemEditorJSON
         void RefreshItemList()
         {
             CurrentLoadedItemsListBox.Items.Clear();
+            Item.ItemList.Sort((x, y) => x.ID.CompareTo(y.ID));
             foreach (Item item in Item.ItemList)
             {
                 CurrentLoadedItemsListBox.Items.Add($"{item.ID} -- Name = {item.Name}");
@@ -274,51 +275,61 @@ namespace ItemEditorJSON
 
         private void DeleteButton_Click(object sender, EventArgs e)
         {
-            Item SelectedItem = Item.ItemList[CurrentLoadedItemsListBox.SelectedIndex];
-            if (SelectedItem != null)
+            if (Item.ItemList.Count >= 1)
             {
-                string itemType = SelectedItem.ItemType;
-                AmmoPanel.Hide();
-                ArmorPanel.Hide();
-                CurrencyPanel.Hide();
-                FoodPanel.Hide();
-                ToolPanel.Hide();
-                WeaponPanel.Hide();
-                switch (itemType)
-                {
-                    case "Ammo":
-                        Ammo DisplayAmmo = Ammo.GetAmmo(SelectedItem.ID);
-                        DisplayAmmo.DestroySelf();
-                        break;
-                    case "Armor":
-                        Armor DisplayArmor = Armor.GetArmor(SelectedItem.ID);
-                        DisplayArmor.DestroySelf();
-                        break;
-                    case "Currency":
-                        Currency DisplayCurrency = Currency.GetCurrency(SelectedItem.ID);
-                        DisplayCurrency.DestroySelf();
-                        break;
-                    case "Food":
-                        Food DisplayFood = Food.GetFood(SelectedItem.ID);
-                        DisplayFood.DestroySelf();
-                        break;
-                    case "Miscellaneous":
-                        SelectedItem.DestroySelf();
-                        break;
-                    case "Tool":
-                        Tool DisplayTool = Tool.GetTool(SelectedItem.ID);
-                        DisplayTool.DestroySelf();
-                        break;
-                    case "Weapon":
-                        Weapon DisplayWeapon = Weapon.GetWeapon(SelectedItem.ID);
-                        DisplayWeapon.DestroySelf();
-                        break;
+                if(CurrentLoadedItemsListBox.SelectedIndex >= 0)
+                { 
+                Item SelectedItem = Item.ItemList[CurrentLoadedItemsListBox.SelectedIndex];
+                    if (SelectedItem != null)
+                    {
+                        string itemType = SelectedItem.ItemType;
+                        AmmoPanel.Hide();
+                        ArmorPanel.Hide();
+                        CurrencyPanel.Hide();
+                        FoodPanel.Hide();
+                        ToolPanel.Hide();
+                        WeaponPanel.Hide();
+                        switch (itemType)
+                        {
+                            case "Ammo":
+                                Ammo DisplayAmmo = Ammo.GetAmmo(SelectedItem.ID);
+                                DisplayAmmo.DestroySelf();
+                                break;
+                            case "Armor":
+                                Armor DisplayArmor = Armor.GetArmor(SelectedItem.ID);
+                                DisplayArmor.DestroySelf();
+                                break;
+                            case "Currency":
+                                Currency DisplayCurrency = Currency.GetCurrency(SelectedItem.ID);
+                                DisplayCurrency.DestroySelf();
+                                break;
+                            case "Food":
+                                Food DisplayFood = Food.GetFood(SelectedItem.ID);
+                                DisplayFood.DestroySelf();
+                                break;
+                            case "Miscellaneous":
+                                SelectedItem.DestroySelf();
+                                break;
+                            case "Tool":
+                                Tool DisplayTool = Tool.GetTool(SelectedItem.ID);
+                                DisplayTool.DestroySelf();
+                                break;
+                            case "Weapon":
+                                Weapon DisplayWeapon = Weapon.GetWeapon(SelectedItem.ID);
+                                DisplayWeapon.DestroySelf();
+                                break;
+                        }
+                        if (SelectedItem != null)
+                        {
+                            SelectedItem.DestroySelf();
+                        }
+                        RefreshItemList();
+                        if (Item.ItemList.Count >= 1)
+                        {
+                            CurrentLoadedItemsListBox.SelectedIndex = 0;
+                        }
+                    }
                 }
-                if (SelectedItem != null)
-                {
-                    SelectedItem.DestroySelf();
-                }
-                RefreshItemList();
             }
         }
 
@@ -368,11 +379,6 @@ namespace ItemEditorJSON
 
         private void LoadButton_Click(object sender, EventArgs e)
         {
-            using (StreamReader file = new StreamReader(@".\ItemsJSON\Items.json"))
-            {
-                string json = file.ReadToEnd();
-                Item.ItemList = JsonConvert.DeserializeObject<List<Item>>(json);
-            }
             using (StreamReader file = new StreamReader(@".\ItemsJSON\Ammos.json"))
             {
                 string json = file.ReadToEnd();
