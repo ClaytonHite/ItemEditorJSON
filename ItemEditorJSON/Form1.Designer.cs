@@ -91,6 +91,7 @@ namespace ItemEditorJSON
             this.CurrencyPanel = new System.Windows.Forms.Panel();
             this.CurrencyPriceTextBox = new System.Windows.Forms.TextBox();
             this.label29 = new System.Windows.Forms.Label();
+            this.MonsterEditorButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.ArmorPanel.SuspendLayout();
             this.WeaponPanel.SuspendLayout();
@@ -230,7 +231,7 @@ namespace ItemEditorJSON
             this.CurrentLoadedItemsListBox.BackColor = System.Drawing.Color.Gray;
             this.CurrentLoadedItemsListBox.FormattingEnabled = true;
             this.CurrentLoadedItemsListBox.ItemHeight = 25;
-            this.CurrentLoadedItemsListBox.Location = new System.Drawing.Point(1080, 10);
+            this.CurrentLoadedItemsListBox.Location = new System.Drawing.Point(1093, 5);
             this.CurrentLoadedItemsListBox.Margin = new System.Windows.Forms.Padding(6);
             this.CurrentLoadedItemsListBox.Name = "CurrentLoadedItemsListBox";
             this.CurrentLoadedItemsListBox.Size = new System.Drawing.Size(492, 829);
@@ -837,12 +838,23 @@ namespace ItemEditorJSON
             this.label29.TabIndex = 7;
             this.label29.Text = "Currency Price :";
             // 
+            // MonsterEditorButton
+            // 
+            this.MonsterEditorButton.Location = new System.Drawing.Point(774, 812);
+            this.MonsterEditorButton.Name = "MonsterEditorButton";
+            this.MonsterEditorButton.Size = new System.Drawing.Size(161, 47);
+            this.MonsterEditorButton.TabIndex = 38;
+            this.MonsterEditorButton.Text = "Monster Editor";
+            this.MonsterEditorButton.UseVisualStyleBackColor = true;
+            this.MonsterEditorButton.Click += new System.EventHandler(this.MonsterEditorButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1600, 865);
+            this.Controls.Add(this.MonsterEditorButton);
             this.Controls.Add(this.ItemWeightTextBox);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.ArticleTextBox);
@@ -955,6 +967,7 @@ namespace ItemEditorJSON
         private System.Windows.Forms.Panel CurrencyPanel;
         public System.Windows.Forms.TextBox CurrencyPriceTextBox;
         private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Button MonsterEditorButton;
     }
 }
 

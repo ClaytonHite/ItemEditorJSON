@@ -428,5 +428,13 @@ namespace ItemEditorJSON
             }
             RefreshItemList();
         }
+
+        private void MonsterEditorButton_Click(object sender, EventArgs e)
+        {
+            Form MonsterEditorForm = new Form2();
+            this.Visible = false;
+            MonsterEditorForm.ShowDialog();
+            this.Close();
+        }
     }
 }
