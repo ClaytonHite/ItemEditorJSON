@@ -12,6 +12,7 @@ namespace ItemEditorJSON.Items.Equipment
         public int Hands { get; set; }
         public int Price { get; set; }
         public string ArmorType { get; set; }
+        public ItemAttribute Attributes { get; set; }
         public static List<Armor> Armors = new List<Armor>();
         public Armor(int _id, string article, string _name, int _imageNumber, int _weight, bool _stackable,string _slotType, string _armorType, int _armor, int _price) : base(_id, article, _name, _imageNumber, _weight, _stackable, _slotType)
         {

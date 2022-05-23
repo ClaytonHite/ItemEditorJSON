@@ -49,8 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Items\Attributes\WeaponAttributes.cs" />
-    <Compile Include="Items\Attributes\ArmorAttributes.cs" />
+    <Compile Include="Items\Attributes\ItemAttribute.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,7 +59,7 @@
     <Compile Include="Items\Equipment\Ammo.cs" />
     <Compile Include="Items\Equipment\Armor.cs" />
     <Compile Include="Items\Equipment\Currency.cs" />
-    <Compile Include="Items\Equipment\Consumables.cs" />
+    <Compile Include="Items\Equipment\Consumable.cs" />
     <Compile Include="Items\Equipment\Miscellaneous.cs" />
     <Compile Include="Items\Equipment\Tool.cs" />
     <Compile Include="Items\Equipment\Weapon.cs" />

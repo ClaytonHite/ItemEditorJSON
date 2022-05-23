@@ -330,7 +330,7 @@ namespace ItemEditorJSON
                         RefreshItemList();
                         if (Item.ItemList.Count >= 1)
                         {
-                            CurrentLoadedItemsListBox.SelectedIndex = 0;
+                            CurrentLoadedItemsListBox.SelectedIndex = CurrentLoadedItemsListBox.SelectedIndex;
                         }
                     }
                 }
@@ -339,41 +339,49 @@ namespace ItemEditorJSON
 
         private void SaveButton_Click(object sender, EventArgs e)
         {
+            File.Create(@".\ItemsJSON\Items.json").Close();
             using (StreamWriter file = File.CreateText(@".\ItemsJSON\Items.json"))
             {
                 JsonSerializer serializer = new JsonSerializer();
                 serializer.Serialize(file, Item.ItemList);
             }
+            File.Create(@".\ItemsJSON\Ammos.json").Close();
             using (StreamWriter file = File.CreateText(@".\ItemsJSON\Ammos.json"))
             {
                 JsonSerializer serializer = new JsonSerializer();
                 serializer.Serialize(file, Ammo.ammoList);
             }
+            File.Create(@".\ItemsJSON\Armors.json").Close();
             using (StreamWriter file = File.CreateText(@".\ItemsJSON\Armors.json"))
             {
                 JsonSerializer serializer = new JsonSerializer();
                 serializer.Serialize(file, Armor.Armors);
             }
+            File.Create(@".\ItemsJSON\Currency.json").Close();
             using (StreamWriter file = File.CreateText(@".\ItemsJSON\Currency.json"))
             {
                 JsonSerializer serializer = new JsonSerializer();
                 serializer.Serialize(file, Currency.Currencies);
             }
-            using (StreamWriter file = File.CreateText(@".\ItemsJSON\Consumables.json"))
+            File.Create(@".\ItemsJSON\Consumable.json").Close();
+            using (StreamWriter file = File.CreateText(@".\ItemsJSON\Consumable.json"))
             {
                 JsonSerializer serializer = new JsonSerializer();
                 serializer.Serialize(file, Consumable.Consumables);
             }
+            File.Create(@".\ItemsJSON\Miscellaneous.json").Close();
             using (StreamWriter file = File.CreateText(@".\ItemsJSON\Miscellaneous.json"))
             {
                 JsonSerializer serializer = new JsonSerializer();
                 serializer.Serialize(file, Miscellaneous.miscellaneousList);
             }
+            File.Create(@".\ItemsJSON\Tools.json").Close();
             using (StreamWriter file = File.CreateText(@".\ItemsJSON\Tools.json"))
             {
                 JsonSerializer serializer = new JsonSerializer();
                 serializer.Serialize(file, Tool.Tools);
             }
+            File.Create(@".\ItemsJSON\Weapons.json").Close();
             using (StreamWriter file = File.CreateText(@".\ItemsJSON\Weapons.json"))
             {
                 JsonSerializer serializer = new JsonSerializer();
@@ -398,7 +406,7 @@ namespace ItemEditorJSON
                 string json = file.ReadToEnd();
                 Currency.Currencies = JsonConvert.DeserializeObject<List<Currency>>(json);
             }
-            using (StreamReader file = new StreamReader(@".\ItemsJSON\Consumables.json"))
+            using (StreamReader file = new StreamReader(@".\ItemsJSON\Consumable.json"))
             {
                 string json = file.ReadToEnd();
                 Consumable.Consumables = JsonConvert.DeserializeObject<List<Consumable>>(json);
