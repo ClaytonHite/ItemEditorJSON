@@ -72,7 +72,7 @@ namespace ItemEditorJSON
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(ItemListBox.SelectedIndex >= 0 && ItemListBox.SelectedItem != null)
+            if (ItemListBox.SelectedIndex >= 0 && ItemListBox.SelectedItem != null && MonsterItemDropCountTextBox.Text != "" && ItemDropPercentage.Text != "") 
             {
                 new LootTable(Item.ItemList[ItemListBox.SelectedIndex], Convert.ToInt32(MonsterItemDropCountTextBox.Text), Convert.ToInt32(ItemDropPercentage.Text));
                 RefreshMonsterLootTable();
@@ -86,6 +86,18 @@ namespace ItemEditorJSON
             {
                 MonsterLootTable.Items.Add($"ID:{loot.LootItem.ID}, {loot.LootItem.Name}, # = {loot.LootCount}, % = {loot.LootChance}");
             }
+        }
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (MonsterLootTable.SelectedIndex >= 0 && MonsterLootTable.SelectedItem != null)
+            {
+                LootTable.MonsterLootTable[MonsterLootTable.SelectedIndex].DestroySelf();
+            }
+            RefreshMonsterLootTable();
+        }
+        private void button3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

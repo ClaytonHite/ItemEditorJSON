@@ -19,6 +19,10 @@ namespace ItemEditorJSON.Entities.Monster
             LootChance = lootChance;
             RegisterLootTable(this);
         }
+        public void DestroySelf()
+        {
+            UnRegisterLootTable(this);
+        }
         public void RegisterLootTable(LootTable _item)
         {
             MonsterLootTable.Add(_item);

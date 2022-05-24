@@ -32,6 +32,11 @@ namespace ItemEditorJSON.Entities.Monster
             Intellect = intellect;
             ExperienceGiven = experienceGiven;
             ClassType = classType;
+            RegisterMonster(this);
+        }
+        public void DestroySelf()
+        {
+            UnRegisterMonster(this);
         }
         public void RegisterMonster(Monster _Monster)
         {

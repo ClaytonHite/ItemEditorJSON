@@ -64,6 +64,10 @@
             this.MonsterItemDropCountTextBox = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.ItemDropPercentage = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -381,6 +385,7 @@
             this.button2.TabIndex = 34;
             this.button2.Text = "Delete Item";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -392,6 +397,7 @@
             this.button3.TabIndex = 35;
             this.button3.Text = "Add";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -470,12 +476,42 @@
             this.ItemDropPercentage.TabIndex = 42;
             this.ItemDropPercentage.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox1.Location = new System.Drawing.Point(863, 23);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(96, 96);
+            this.pictureBox1.TabIndex = 43;
+            this.pictureBox1.TabStop = false;
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(863, 134);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(41, 37);
+            this.button7.TabIndex = 44;
+            this.button7.Text = "<<";
+            this.button7.UseVisualStyleBackColor = true;
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(918, 134);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(41, 37);
+            this.button8.TabIndex = 45;
+            this.button8.Text = ">>";
+            this.button8.UseVisualStyleBackColor = true;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1600, 865);
+            this.Controls.Add(this.button8);
+            this.Controls.Add(this.button7);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.ItemDropPercentage);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.MonsterItemDropCountTextBox);
@@ -515,6 +551,7 @@
             this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "Form2";
             this.Text = "Form2";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -558,5 +595,8 @@
         private System.Windows.Forms.TextBox MonsterItemDropCountTextBox;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox ItemDropPercentage;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button8;
     }
 }
