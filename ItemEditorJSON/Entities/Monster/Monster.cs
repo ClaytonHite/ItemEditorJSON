@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace ItemEditorJSON.Entities.Monster
 {
-    class Monster
+    public class Monster
     {
-        int ID;
-        string Name;
+        public int ID;
+        public string Name;
         string Race;
         int Health;
         int Level;
@@ -17,10 +17,10 @@ namespace ItemEditorJSON.Entities.Monster
         int Dexterity;
         int Intellect;
         int ExperienceGiven;
-        int ClassType;
+        string ClassType;
         List<LootTable> LootTable;
-        List<Monster> Monsters = new List<Monster>();
-        public Monster(int iD, string name, string race, int health, int level, int strength, int dexterity, int intellect, int experienceGiven, int classType, List<LootTable> lootTable)
+        public static List<Monster> Monsters = new List<Monster>();
+        public Monster(int iD, string name, string race, int health, int level, int strength, int dexterity, int intellect, int experienceGiven, string classType, List<LootTable> lootTable)
         {
             ID = iD;
             Name = name;
@@ -32,6 +32,7 @@ namespace ItemEditorJSON.Entities.Monster
             Intellect = intellect;
             ExperienceGiven = experienceGiven;
             ClassType = classType;
+            LootTable = lootTable;
             RegisterMonster(this);
         }
         public void DestroySelf()

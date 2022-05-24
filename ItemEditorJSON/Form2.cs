@@ -97,7 +97,28 @@ namespace ItemEditorJSON
         }
         private void button3_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                new Monster(Convert.ToInt32(MonsterIDTextBox.Text), MonsterNameTextBox.Text, MonsterRaceTextBox.Text,
+                    Convert.ToInt32(MonsterHealthTextBox.Text), Convert.ToInt32(MonsterLevelTextBox.Text),
+                    Convert.ToInt32(MonsterStrengthTextBox.Text), Convert.ToInt32(MonsterDexterityTextBox.Text),
+                    Convert.ToInt32(MonsterIntellectTextBox.Text), Convert.ToInt32(MonsterXPGivenTextBox.Text),
+                    MonsterClassTypeComboBox.Text, LootTable.MonsterLootTable);
+            }
+            catch
+            {
+                MessageBox.Show("All Fields were not completed.");
+            }
+            RefreshMonsterList();
+        }
+        void RefreshMonsterList()
+        {
+            MonsterList.Items.Clear();
+            Monster.Monsters.Sort((x, y) => x.ID.CompareTo(y.ID));
+            foreach (Monster monster in Monster.Monsters)
+            {
+                MonsterList.Items.Add($"ID: {monster.ID}, Name -- {monster.Name}");
+            }
         }
     }
 }

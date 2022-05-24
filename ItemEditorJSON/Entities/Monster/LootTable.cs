@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ItemEditorJSON.Entities.Monster
 {
-    class LootTable
+    public class LootTable
     {
         public Item LootItem;
         public int LootCount;

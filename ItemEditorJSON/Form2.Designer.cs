@@ -41,7 +41,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.MonsterXPGivenTextBox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.MonsterClassTypeComboBox = new System.Windows.Forms.ComboBox();
             this.MonsterStrengthTextBox = new System.Windows.Forms.TextBox();
             this.MonsterDexterityTextBox = new System.Windows.Forms.TextBox();
             this.MonsterIntellectTextBox = new System.Windows.Forms.TextBox();
@@ -214,19 +214,19 @@
             this.label7.Text = "Type :";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // comboBox1
+            // MonsterClassTypeComboBox
             // 
-            this.comboBox1.BackColor = System.Drawing.Color.Gray;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.MonsterClassTypeComboBox.BackColor = System.Drawing.Color.Gray;
+            this.MonsterClassTypeComboBox.FormattingEnabled = true;
+            this.MonsterClassTypeComboBox.Items.AddRange(new object[] {
             "Melee",
             "Ranged",
             "Caster"});
-            this.comboBox1.Location = new System.Drawing.Point(640, 223);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(196, 33);
-            this.comboBox1.TabIndex = 14;
+            this.MonsterClassTypeComboBox.Location = new System.Drawing.Point(640, 223);
+            this.MonsterClassTypeComboBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.MonsterClassTypeComboBox.Name = "MonsterClassTypeComboBox";
+            this.MonsterClassTypeComboBox.Size = new System.Drawing.Size(196, 33);
+            this.MonsterClassTypeComboBox.TabIndex = 14;
             // 
             // MonsterStrengthTextBox
             // 
@@ -534,7 +534,7 @@
             this.Controls.Add(this.MonsterIntellectTextBox);
             this.Controls.Add(this.MonsterDexterityTextBox);
             this.Controls.Add(this.MonsterStrengthTextBox);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.MonsterClassTypeComboBox);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.MonsterXPGivenTextBox);
             this.Controls.Add(this.label6);
@@ -572,7 +572,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox MonsterXPGivenTextBox;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox MonsterClassTypeComboBox;
         private System.Windows.Forms.TextBox MonsterStrengthTextBox;
         private System.Windows.Forms.TextBox MonsterDexterityTextBox;
         private System.Windows.Forms.TextBox MonsterIntellectTextBox;
