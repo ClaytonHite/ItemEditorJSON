@@ -120,5 +120,14 @@ namespace ItemEditorJSON
                 MonsterList.Items.Add($"ID: {monster.ID}, Name -- {monster.Name}");
             }
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (MonsterList.SelectedIndex >= 0 && MonsterList.SelectedItem != null)
+            {
+                Monster.Monsters[MonsterList.SelectedIndex].DestroySelf();
+            }
+            RefreshMonsterList();
+        }
     }
 }
