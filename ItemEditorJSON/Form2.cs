@@ -16,10 +16,13 @@ namespace ItemEditorJSON
 {
     public partial class Form2 : Form
     {
+        int numberOfMonsterImages = 8;
         public Form2()
         {
             InitializeComponent();
             LoadItems();
+            MonsterIDTextBox.Text = "500";
+            pictureBox1.Image = (Image)Properties.Resources.ResourceManager.GetObject("_" + MonsterIDTextBox.Text);
         }
         public void LoadItems()
         {
@@ -120,7 +123,6 @@ namespace ItemEditorJSON
                 MonsterList.Items.Add($"ID: {monster.ID}, Name -- {monster.Name}");
             }
         }
-
         private void button4_Click(object sender, EventArgs e)
         {
             if (MonsterList.SelectedIndex >= 0 && MonsterList.SelectedItem != null)
@@ -128,6 +130,36 @@ namespace ItemEditorJSON
                 Monster.Monsters[MonsterList.SelectedIndex].DestroySelf();
             }
             RefreshMonsterList();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {//save button
+            File.Create(@".\ItemsJSON\Monsters.json").Close();
+            using (StreamWriter file = File.CreateText(@".\ItemsJSON\Monsters.json"))
+            {
+                JsonSerializer serializer = new JsonSerializer();
+                serializer.Serialize(file, Monster.Monsters);
+            }
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {//picturebox button left
+            if (Convert.ToInt32(MonsterIDTextBox.Text) <= 500)
+            {
+                MonsterIDTextBox.Text = $"{numberOfMonsterImages + 500}";
+            }
+            MonsterIDTextBox.Text = $"{Convert.ToInt32(MonsterIDTextBox.Text) - 1}";
+            pictureBox1.Image = (Image)Properties.Resources.ResourceManager.GetObject("_" + MonsterIDTextBox.Text);
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {//picturebox button right
+            if (Convert.ToInt32(MonsterIDTextBox.Text) >= 500 + numberOfMonsterImages - 1)
+            {
+                MonsterIDTextBox.Text = $"{499}";
+            }
+            MonsterIDTextBox.Text = $"{Convert.ToInt32(MonsterIDTextBox.Text) + 1}";
+            pictureBox1.Image = (Image)Properties.Resources.ResourceManager.GetObject("_" + MonsterIDTextBox.Text);
         }
     }
 }
