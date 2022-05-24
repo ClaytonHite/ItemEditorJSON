@@ -1,0 +1,49 @@
+[
+  {
+    "ID": 500,
+    "Name": "Rat",
+    "Race": "Rodent",
+    "Health": 10,
+    "Level": 1,
+    "Strength": 10,
+    "Dexterity": 10,
+    "Intellect": 10,
+    "ExperienceGiven": 10,
+    "ClassType": "Melee",
+    "LootTable": [
+      {
+        "LootItem": {
+          "ID": 1000,
+          "Article": "a",
+          "Name": "Copper Coin",
+          "Weight": 0,
+          "ImageNumber": 1000,
+          "Stackable": false,
+          "ItemType": "Currency",
+          "Price": 1,
+          "AmountOfItem": 0
+        },
+        "LootCount": 2,
+        "LootChance": 50
+      },
+      {
+        "LootItem": {
+          "ID": 1036,
+          "Article": "an",
+          "Name": "Apple",
+          "Weight": 0,
+          "ImageNumber": 1036,
+          "Stackable": false,
+          "ItemType": "Food",
+          "HealthAmountPerTick": 2,
+          "ManaAmountPerTick": 2,
+          "FullDuration": 100,
+          "Price": 5,
+          "AmountOfItem": 0
+        },
+        "LootCount": 1,
+        "LootChance": 50
+      }
+    ]
+  }
+]
