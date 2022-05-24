@@ -10,15 +10,15 @@ namespace ItemEditorJSON.Entities.Monster
     {
         public int ID;
         public string Name;
-        string Race;
-        int Health;
-        int Level;
-        int Strength;
-        int Dexterity;
-        int Intellect;
-        int ExperienceGiven;
-        string ClassType;
-        List<LootTable> LootTable;
+        public string Race;
+        public int Health;
+        public int Level;
+        public int Strength;
+        public int Dexterity;
+        public int Intellect;
+        public int ExperienceGiven;
+        public string ClassType;
+        public List<LootTable> LootTable;
         public static List<Monster> Monsters = new List<Monster>();
         public Monster(int iD, string name, string race, int health, int level, int strength, int dexterity, int intellect, int experienceGiven, string classType, List<LootTable> lootTable)
         {
@@ -46,6 +46,10 @@ namespace ItemEditorJSON.Entities.Monster
         public void UnRegisterMonster(Monster _Monster)
         {
             Monsters.Remove(_Monster);
+        }
+        public static List<Monster> GetMonsterList()
+        {
+            return Monsters;
         }
     }
 }

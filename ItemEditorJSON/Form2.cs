@@ -138,7 +138,7 @@ namespace ItemEditorJSON
             using (StreamWriter file = File.CreateText(@".\ItemsJSON\Monsters.json"))
             {
                 JsonSerializer serializer = new JsonSerializer();
-                serializer.Serialize(file, Monster.Monsters);
+                serializer.Serialize(file, Monster.GetMonsterList());
             }
         }
 
