@@ -62,15 +62,18 @@
             this.button6 = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
             this.MonsterItemDropCountTextBox = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.ItemDropPercentage = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(13, 13);
+            this.label1.Location = new System.Drawing.Point(26, 25);
+            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(200, 20);
+            this.label1.Size = new System.Drawing.Size(400, 38);
             this.label1.TabIndex = 0;
             this.label1.Text = "Monster ID :";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -78,9 +81,10 @@
             // MonsterIDTextBox
             // 
             this.MonsterIDTextBox.BackColor = System.Drawing.Color.Gray;
-            this.MonsterIDTextBox.Location = new System.Drawing.Point(220, 12);
+            this.MonsterIDTextBox.Location = new System.Drawing.Point(440, 23);
+            this.MonsterIDTextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.MonsterIDTextBox.Name = "MonsterIDTextBox";
-            this.MonsterIDTextBox.Size = new System.Drawing.Size(200, 20);
+            this.MonsterIDTextBox.Size = new System.Drawing.Size(396, 31);
             this.MonsterIDTextBox.TabIndex = 1;
             this.MonsterIDTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -88,9 +92,10 @@
             // 
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(13, 38);
+            this.label2.Location = new System.Drawing.Point(26, 73);
+            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(200, 20);
+            this.label2.Size = new System.Drawing.Size(400, 38);
             this.label2.TabIndex = 2;
             this.label2.Text = "Monster Name :";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -98,9 +103,10 @@
             // MonsterNameTextBox
             // 
             this.MonsterNameTextBox.BackColor = System.Drawing.Color.Gray;
-            this.MonsterNameTextBox.Location = new System.Drawing.Point(219, 38);
+            this.MonsterNameTextBox.Location = new System.Drawing.Point(438, 73);
+            this.MonsterNameTextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.MonsterNameTextBox.Name = "MonsterNameTextBox";
-            this.MonsterNameTextBox.Size = new System.Drawing.Size(200, 20);
+            this.MonsterNameTextBox.Size = new System.Drawing.Size(396, 31);
             this.MonsterNameTextBox.TabIndex = 3;
             this.MonsterNameTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -108,9 +114,10 @@
             // 
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.Control;
-            this.label3.Location = new System.Drawing.Point(13, 64);
+            this.label3.Location = new System.Drawing.Point(26, 123);
+            this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(200, 20);
+            this.label3.Size = new System.Drawing.Size(400, 38);
             this.label3.TabIndex = 4;
             this.label3.Text = "Monster Race :";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -118,9 +125,10 @@
             // MonsterRaceTextBox
             // 
             this.MonsterRaceTextBox.BackColor = System.Drawing.Color.Gray;
-            this.MonsterRaceTextBox.Location = new System.Drawing.Point(220, 64);
+            this.MonsterRaceTextBox.Location = new System.Drawing.Point(440, 123);
+            this.MonsterRaceTextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.MonsterRaceTextBox.Name = "MonsterRaceTextBox";
-            this.MonsterRaceTextBox.Size = new System.Drawing.Size(200, 20);
+            this.MonsterRaceTextBox.Size = new System.Drawing.Size(396, 31);
             this.MonsterRaceTextBox.TabIndex = 5;
             this.MonsterRaceTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -128,9 +136,10 @@
             // 
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.Control;
-            this.label4.Location = new System.Drawing.Point(13, 87);
+            this.label4.Location = new System.Drawing.Point(26, 167);
+            this.label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(100, 20);
+            this.label4.Size = new System.Drawing.Size(200, 38);
             this.label4.TabIndex = 6;
             this.label4.Text = "Health :";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -138,9 +147,10 @@
             // MonsterHealthTextBox
             // 
             this.MonsterHealthTextBox.BackColor = System.Drawing.Color.Gray;
-            this.MonsterHealthTextBox.Location = new System.Drawing.Point(113, 87);
+            this.MonsterHealthTextBox.Location = new System.Drawing.Point(226, 167);
+            this.MonsterHealthTextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.MonsterHealthTextBox.Name = "MonsterHealthTextBox";
-            this.MonsterHealthTextBox.Size = new System.Drawing.Size(100, 20);
+            this.MonsterHealthTextBox.Size = new System.Drawing.Size(196, 31);
             this.MonsterHealthTextBox.TabIndex = 7;
             this.MonsterHealthTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -148,9 +158,10 @@
             // 
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.Control;
-            this.label5.Location = new System.Drawing.Point(13, 113);
+            this.label5.Location = new System.Drawing.Point(26, 217);
+            this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(100, 20);
+            this.label5.Size = new System.Drawing.Size(200, 38);
             this.label5.TabIndex = 8;
             this.label5.Text = "Level :";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -158,9 +169,10 @@
             // MonsterLevelTextBox
             // 
             this.MonsterLevelTextBox.BackColor = System.Drawing.Color.Gray;
-            this.MonsterLevelTextBox.Location = new System.Drawing.Point(113, 113);
+            this.MonsterLevelTextBox.Location = new System.Drawing.Point(226, 217);
+            this.MonsterLevelTextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.MonsterLevelTextBox.Name = "MonsterLevelTextBox";
-            this.MonsterLevelTextBox.Size = new System.Drawing.Size(100, 20);
+            this.MonsterLevelTextBox.Size = new System.Drawing.Size(196, 31);
             this.MonsterLevelTextBox.TabIndex = 9;
             this.MonsterLevelTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -168,9 +180,10 @@
             // 
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.Control;
-            this.label6.Location = new System.Drawing.Point(216, 90);
+            this.label6.Location = new System.Drawing.Point(432, 173);
+            this.label6.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(100, 20);
+            this.label6.Size = new System.Drawing.Size(200, 38);
             this.label6.TabIndex = 10;
             this.label6.Text = "XP Given :";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -178,9 +191,10 @@
             // MonsterXPGivenTextBox
             // 
             this.MonsterXPGivenTextBox.BackColor = System.Drawing.Color.Gray;
-            this.MonsterXPGivenTextBox.Location = new System.Drawing.Point(320, 90);
+            this.MonsterXPGivenTextBox.Location = new System.Drawing.Point(640, 173);
+            this.MonsterXPGivenTextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.MonsterXPGivenTextBox.Name = "MonsterXPGivenTextBox";
-            this.MonsterXPGivenTextBox.Size = new System.Drawing.Size(100, 20);
+            this.MonsterXPGivenTextBox.Size = new System.Drawing.Size(196, 31);
             this.MonsterXPGivenTextBox.TabIndex = 11;
             this.MonsterXPGivenTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -188,9 +202,10 @@
             // 
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.Control;
-            this.label7.Location = new System.Drawing.Point(216, 116);
+            this.label7.Location = new System.Drawing.Point(432, 223);
+            this.label7.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(100, 20);
+            this.label7.Size = new System.Drawing.Size(200, 38);
             this.label7.TabIndex = 13;
             this.label7.Text = "Type :";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -203,35 +218,39 @@
             "Melee",
             "Ranged",
             "Caster"});
-            this.comboBox1.Location = new System.Drawing.Point(320, 116);
+            this.comboBox1.Location = new System.Drawing.Point(640, 223);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(100, 21);
+            this.comboBox1.Size = new System.Drawing.Size(196, 33);
             this.comboBox1.TabIndex = 14;
             // 
             // MonsterStrengthTextBox
             // 
             this.MonsterStrengthTextBox.BackColor = System.Drawing.Color.Gray;
-            this.MonsterStrengthTextBox.Location = new System.Drawing.Point(113, 139);
+            this.MonsterStrengthTextBox.Location = new System.Drawing.Point(226, 267);
+            this.MonsterStrengthTextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.MonsterStrengthTextBox.Name = "MonsterStrengthTextBox";
-            this.MonsterStrengthTextBox.Size = new System.Drawing.Size(100, 20);
+            this.MonsterStrengthTextBox.Size = new System.Drawing.Size(196, 31);
             this.MonsterStrengthTextBox.TabIndex = 15;
             this.MonsterStrengthTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // MonsterDexterityTextBox
             // 
             this.MonsterDexterityTextBox.BackColor = System.Drawing.Color.Gray;
-            this.MonsterDexterityTextBox.Location = new System.Drawing.Point(113, 165);
+            this.MonsterDexterityTextBox.Location = new System.Drawing.Point(226, 317);
+            this.MonsterDexterityTextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.MonsterDexterityTextBox.Name = "MonsterDexterityTextBox";
-            this.MonsterDexterityTextBox.Size = new System.Drawing.Size(100, 20);
+            this.MonsterDexterityTextBox.Size = new System.Drawing.Size(196, 31);
             this.MonsterDexterityTextBox.TabIndex = 16;
             this.MonsterDexterityTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // MonsterIntellectTextBox
             // 
             this.MonsterIntellectTextBox.BackColor = System.Drawing.Color.Gray;
-            this.MonsterIntellectTextBox.Location = new System.Drawing.Point(113, 191);
+            this.MonsterIntellectTextBox.Location = new System.Drawing.Point(226, 367);
+            this.MonsterIntellectTextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.MonsterIntellectTextBox.Name = "MonsterIntellectTextBox";
-            this.MonsterIntellectTextBox.Size = new System.Drawing.Size(100, 20);
+            this.MonsterIntellectTextBox.Size = new System.Drawing.Size(196, 31);
             this.MonsterIntellectTextBox.TabIndex = 20;
             this.MonsterIntellectTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -239,9 +258,10 @@
             // 
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.Control;
-            this.label8.Location = new System.Drawing.Point(13, 139);
+            this.label8.Location = new System.Drawing.Point(26, 267);
+            this.label8.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(100, 20);
+            this.label8.Size = new System.Drawing.Size(200, 38);
             this.label8.TabIndex = 21;
             this.label8.Text = "Strength :";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -250,9 +270,10 @@
             // 
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.Control;
-            this.label9.Location = new System.Drawing.Point(13, 165);
+            this.label9.Location = new System.Drawing.Point(26, 317);
+            this.label9.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(100, 20);
+            this.label9.Size = new System.Drawing.Size(200, 38);
             this.label9.TabIndex = 22;
             this.label9.Text = "Dexterity :";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -261,9 +282,10 @@
             // 
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.SystemColors.Control;
-            this.label13.Location = new System.Drawing.Point(13, 191);
+            this.label13.Location = new System.Drawing.Point(26, 367);
+            this.label13.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(100, 20);
+            this.label13.Size = new System.Drawing.Size(200, 38);
             this.label13.TabIndex = 26;
             this.label13.Text = "Intellect :";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -272,27 +294,32 @@
             // 
             this.MonsterLootTable.BackColor = System.Drawing.Color.Gray;
             this.MonsterLootTable.FormattingEnabled = true;
-            this.MonsterLootTable.Location = new System.Drawing.Point(17, 241);
+            this.MonsterLootTable.ItemHeight = 25;
+            this.MonsterLootTable.Location = new System.Drawing.Point(34, 463);
+            this.MonsterLootTable.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.MonsterLootTable.Name = "MonsterLootTable";
-            this.MonsterLootTable.Size = new System.Drawing.Size(196, 199);
+            this.MonsterLootTable.Size = new System.Drawing.Size(388, 379);
             this.MonsterLootTable.TabIndex = 27;
             // 
             // ItemListBox
             // 
             this.ItemListBox.BackColor = System.Drawing.Color.Gray;
             this.ItemListBox.FormattingEnabled = true;
-            this.ItemListBox.Location = new System.Drawing.Point(320, 241);
+            this.ItemListBox.ItemHeight = 25;
+            this.ItemListBox.Location = new System.Drawing.Point(640, 463);
+            this.ItemListBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.ItemListBox.Name = "ItemListBox";
-            this.ItemListBox.Size = new System.Drawing.Size(200, 199);
+            this.ItemListBox.Size = new System.Drawing.Size(396, 379);
             this.ItemListBox.TabIndex = 28;
             // 
             // label10
             // 
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.Control;
-            this.label10.Location = new System.Drawing.Point(13, 218);
+            this.label10.Location = new System.Drawing.Point(26, 419);
+            this.label10.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(200, 20);
+            this.label10.Size = new System.Drawing.Size(400, 38);
             this.label10.TabIndex = 29;
             this.label10.Text = "Monster\'s Loot Table";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -301,9 +328,10 @@
             // 
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.Control;
-            this.label11.Location = new System.Drawing.Point(320, 218);
+            this.label11.Location = new System.Drawing.Point(640, 419);
+            this.label11.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(200, 20);
+            this.label11.Size = new System.Drawing.Size(400, 38);
             this.label11.TabIndex = 30;
             this.label11.Text = "Items";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -312,18 +340,21 @@
             // 
             this.MonsterList.BackColor = System.Drawing.Color.Gray;
             this.MonsterList.FormattingEnabled = true;
-            this.MonsterList.Location = new System.Drawing.Point(588, 33);
+            this.MonsterList.ItemHeight = 25;
+            this.MonsterList.Location = new System.Drawing.Point(1176, 63);
+            this.MonsterList.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.MonsterList.Name = "MonsterList";
-            this.MonsterList.Size = new System.Drawing.Size(200, 407);
+            this.MonsterList.Size = new System.Drawing.Size(396, 779);
             this.MonsterList.TabIndex = 31;
             // 
             // label12
             // 
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.SystemColors.Control;
-            this.label12.Location = new System.Drawing.Point(588, 9);
+            this.label12.Location = new System.Drawing.Point(1176, 17);
+            this.label12.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(200, 20);
+            this.label12.Size = new System.Drawing.Size(400, 38);
             this.label12.TabIndex = 32;
             this.label12.Text = "Monster List";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -331,19 +362,22 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(219, 332);
+            this.button1.Location = new System.Drawing.Point(438, 722);
+            this.button1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(97, 28);
+            this.button1.Size = new System.Drawing.Size(194, 54);
             this.button1.TabIndex = 33;
             this.button1.Text = "Add Item";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(219, 366);
+            this.button2.Location = new System.Drawing.Point(438, 788);
+            this.button2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(97, 28);
+            this.button2.Size = new System.Drawing.Size(194, 54);
             this.button2.TabIndex = 34;
             this.button2.Text = "Delete Item";
             this.button2.UseVisualStyleBackColor = true;
@@ -351,9 +385,10 @@
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(493, 33);
+            this.button3.Location = new System.Drawing.Point(986, 63);
+            this.button3.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(89, 25);
+            this.button3.Size = new System.Drawing.Size(178, 48);
             this.button3.TabIndex = 35;
             this.button3.Text = "Add";
             this.button3.UseVisualStyleBackColor = true;
@@ -361,9 +396,10 @@
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(493, 64);
+            this.button4.Location = new System.Drawing.Point(986, 123);
+            this.button4.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(89, 25);
+            this.button4.Size = new System.Drawing.Size(178, 48);
             this.button4.TabIndex = 36;
             this.button4.Text = "Delete";
             this.button4.UseVisualStyleBackColor = true;
@@ -371,9 +407,10 @@
             // button5
             // 
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(493, 95);
+            this.button5.Location = new System.Drawing.Point(986, 183);
+            this.button5.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(89, 25);
+            this.button5.Size = new System.Drawing.Size(178, 48);
             this.button5.TabIndex = 37;
             this.button5.Text = "Load";
             this.button5.UseVisualStyleBackColor = true;
@@ -381,9 +418,10 @@
             // button6
             // 
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(493, 126);
+            this.button6.Location = new System.Drawing.Point(986, 242);
+            this.button6.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(89, 25);
+            this.button6.Size = new System.Drawing.Size(178, 48);
             this.button6.TabIndex = 38;
             this.button6.Text = "Save";
             this.button6.UseVisualStyleBackColor = true;
@@ -392,9 +430,10 @@
             // 
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.SystemColors.Control;
-            this.label14.Location = new System.Drawing.Point(219, 241);
+            this.label14.Location = new System.Drawing.Point(434, 463);
+            this.label14.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(100, 46);
+            this.label14.Size = new System.Drawing.Size(200, 84);
             this.label14.TabIndex = 39;
             this.label14.Text = "Drop Count :";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -402,18 +441,43 @@
             // MonsterItemDropCountTextBox
             // 
             this.MonsterItemDropCountTextBox.BackColor = System.Drawing.Color.Gray;
-            this.MonsterItemDropCountTextBox.Location = new System.Drawing.Point(219, 290);
+            this.MonsterItemDropCountTextBox.Location = new System.Drawing.Point(442, 558);
+            this.MonsterItemDropCountTextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.MonsterItemDropCountTextBox.Name = "MonsterItemDropCountTextBox";
-            this.MonsterItemDropCountTextBox.Size = new System.Drawing.Size(97, 20);
+            this.MonsterItemDropCountTextBox.Size = new System.Drawing.Size(190, 31);
             this.MonsterItemDropCountTextBox.TabIndex = 40;
             this.MonsterItemDropCountTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // label15
+            // 
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.SystemColors.Control;
+            this.label15.Location = new System.Drawing.Point(432, 595);
+            this.label15.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(200, 78);
+            this.label15.TabIndex = 41;
+            this.label15.Text = "Drop% 0-100 :";
+            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // ItemDropPercentage
+            // 
+            this.ItemDropPercentage.BackColor = System.Drawing.Color.Gray;
+            this.ItemDropPercentage.Location = new System.Drawing.Point(442, 679);
+            this.ItemDropPercentage.Margin = new System.Windows.Forms.Padding(6);
+            this.ItemDropPercentage.Name = "ItemDropPercentage";
+            this.ItemDropPercentage.Size = new System.Drawing.Size(190, 31);
+            this.ItemDropPercentage.TabIndex = 42;
+            this.ItemDropPercentage.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // Form2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1600, 865);
+            this.Controls.Add(this.ItemDropPercentage);
+            this.Controls.Add(this.label15);
             this.Controls.Add(this.MonsterItemDropCountTextBox);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.button6);
@@ -448,6 +512,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.MonsterIDTextBox);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "Form2";
             this.Text = "Form2";
             this.ResumeLayout(false);
@@ -491,5 +556,7 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox MonsterItemDropCountTextBox;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox ItemDropPercentage;
     }
 }

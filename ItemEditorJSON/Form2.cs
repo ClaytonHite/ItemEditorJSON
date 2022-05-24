@@ -1,4 +1,5 @@
-﻿using ItemEditorJSON.Items.Equipment;
+﻿using ItemEditorJSON.Entities.Monster;
+using ItemEditorJSON.Items.Equipment;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -66,6 +67,24 @@ namespace ItemEditorJSON
             foreach (Item item in Item.ItemList)
             {
                 ItemListBox.Items.Add($"{item.ID} -- Name = {item.Name}");
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if(ItemListBox.SelectedIndex >= 0 && ItemListBox.SelectedItem != null)
+            {
+                new LootTable(Item.ItemList[ItemListBox.SelectedIndex], Convert.ToInt32(MonsterItemDropCountTextBox.Text), Convert.ToInt32(ItemDropPercentage.Text));
+                RefreshMonsterLootTable();
+            }
+        }
+        void RefreshMonsterLootTable()
+        {
+            MonsterLootTable.Items.Clear();
+            LootTable.MonsterLootTable.Sort((x, y) => x.LootItem.ID.CompareTo(y.LootItem.ID));
+            foreach (LootTable loot in LootTable.MonsterLootTable)
+            {
+                MonsterLootTable.Items.Add($"ID:{loot.LootItem.ID}, {loot.LootItem.Name}, # = {loot.LootCount}, % = {loot.LootChance}");
             }
         }
     }

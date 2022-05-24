@@ -49,6 +49,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\Monster\LootTable.cs" />
+    <Compile Include="Entities\Monster\Monster.cs" />
     <Compile Include="Form2.cs">
       <SubType>Form</SubType>
     </Compile>
