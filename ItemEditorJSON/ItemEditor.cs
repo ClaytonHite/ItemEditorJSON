@@ -16,7 +16,8 @@ namespace ItemEditorJSON
 {
     public partial class ItemEditor : Form
     {
-        int numberOfImages = 37;
+        int numberOfImages;
+        List<Image> images = new List<Image>();
         public ItemEditor()
         {
             InitializeComponent();
@@ -30,6 +31,14 @@ namespace ItemEditorJSON
             ImageNumberTextBox.Text = "1000";
             ItemIDTextBox.Text = ImageNumberTextBox.Text;
             pictureBox1.Image = (Image)Properties.Resources.ResourceManager.GetObject("_" + ImageNumberTextBox.Text);
+            for (int i = 1000; i < 1500; i++)
+            {
+                if((Image)Properties.Resources.ResourceManager.GetObject("_" + i) != null)
+                {
+                    images.Add((Image)Properties.Resources.ResourceManager.GetObject("_" + i));
+                    numberOfImages++;
+                }
+            }
             Item.ItemList.Clear();
         }
         private void CurrentLoadedItemsListBox_SelectedIndexChanged(object sender, EventArgs e)

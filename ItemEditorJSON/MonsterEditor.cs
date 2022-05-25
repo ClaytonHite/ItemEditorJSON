@@ -16,13 +16,22 @@ namespace ItemEditorJSON
 {
     public partial class MonsterEditor : Form
     {
-        int numberOfMonsterImages = 8;
+        int numberOfMonsterImages;
+        List<Image> monsterImages = new List<Image>();
         public MonsterEditor()
         {
             InitializeComponent();
             LoadItems();
             MonsterIDTextBox.Text = "500";
             pictureBox1.Image = (Image)Properties.Resources.ResourceManager.GetObject("_" + MonsterIDTextBox.Text);
+            for (int i = 500; i < 1000; i++)
+            {
+                if ((Image)Properties.Resources.ResourceManager.GetObject("_" + i) != null)
+                {
+                    monsterImages.Add((Image)Properties.Resources.ResourceManager.GetObject("_" + i));
+                    numberOfMonsterImages++;
+                }
+            }
         }
         public void LoadItems()
         {
