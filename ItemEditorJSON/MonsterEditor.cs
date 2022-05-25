@@ -14,10 +14,10 @@ using System.Windows.Forms;
 
 namespace ItemEditorJSON
 {
-    public partial class Form2 : Form
+    public partial class MonsterEditor : Form
     {
         int numberOfMonsterImages = 8;
-        public Form2()
+        public MonsterEditor()
         {
             InitializeComponent();
             LoadItems();
@@ -26,39 +26,47 @@ namespace ItemEditorJSON
         }
         public void LoadItems()
         {
+            Item.ItemList.Clear();
             using (StreamReader file = new StreamReader(@".\ItemsJSON\Ammos.json"))
             {
                 string json = file.ReadToEnd();
+                Ammo.ammoList.Clear();
                 Ammo.ammoList = JsonConvert.DeserializeObject<List<Ammo>>(json);
             }
             using (StreamReader file = new StreamReader(@".\ItemsJSON\Armors.json"))
             {
                 string json = file.ReadToEnd();
+                Armor.Armors.Clear();
                 Armor.Armors = JsonConvert.DeserializeObject<List<Armor>>(json);
             }
             using (StreamReader file = new StreamReader(@".\ItemsJSON\Currency.json"))
             {
                 string json = file.ReadToEnd();
+                Currency.Currencies.Clear();
                 Currency.Currencies = JsonConvert.DeserializeObject<List<Currency>>(json);
             }
             using (StreamReader file = new StreamReader(@".\ItemsJSON\Consumable.json"))
             {
                 string json = file.ReadToEnd();
+                Consumable.Consumables.Clear();
                 Consumable.Consumables = JsonConvert.DeserializeObject<List<Consumable>>(json);
             }
             using (StreamReader file = new StreamReader(@".\ItemsJSON\Miscellaneous.json"))
             {
                 string json = file.ReadToEnd();
+                Miscellaneous.miscellaneousList.Clear();
                 Miscellaneous.miscellaneousList = JsonConvert.DeserializeObject<List<Miscellaneous>>(json);
             }
             using (StreamReader file = new StreamReader(@".\ItemsJSON\Tools.json"))
             {
                 string json = file.ReadToEnd();
+                Tool.Tools.Clear();
                 Tool.Tools = JsonConvert.DeserializeObject<List<Tool>>(json);
             }
             using (StreamReader file = new StreamReader(@".\ItemsJSON\Weapons.json"))
             {
                 string json = file.ReadToEnd();
+                Weapon.Weapons.Clear();
                 Weapon.Weapons = JsonConvert.DeserializeObject<List<Weapon>>(json);
             }
             RefreshItemListForMonster();
@@ -160,6 +168,14 @@ namespace ItemEditorJSON
             }
             MonsterIDTextBox.Text = $"{Convert.ToInt32(MonsterIDTextBox.Text) + 1}";
             pictureBox1.Image = (Image)Properties.Resources.ResourceManager.GetObject("_" + MonsterIDTextBox.Text);
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            Form StartForm = new StartForm();
+            this.Visible = false;
+            StartForm.ShowDialog();
+            this.Close();
         }
     }
 }

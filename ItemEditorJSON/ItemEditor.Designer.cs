@@ -1,7 +1,7 @@
 ﻿
 namespace ItemEditorJSON
 {
-    partial class Form1
+    partial class ItemEditor
     {
         /// <summary>
         /// Required designer variable.
@@ -91,7 +91,7 @@ namespace ItemEditorJSON
             this.CurrencyPanel = new System.Windows.Forms.Panel();
             this.CurrencyPriceTextBox = new System.Windows.Forms.TextBox();
             this.label29 = new System.Windows.Forms.Label();
-            this.MonsterEditorButton = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.ArmorPanel.SuspendLayout();
             this.WeaponPanel.SuspendLayout();
@@ -838,23 +838,24 @@ namespace ItemEditorJSON
             this.label29.TabIndex = 7;
             this.label29.Text = "Currency Price :";
             // 
-            // MonsterEditorButton
+            // button1
             // 
-            this.MonsterEditorButton.Location = new System.Drawing.Point(774, 812);
-            this.MonsterEditorButton.Name = "MonsterEditorButton";
-            this.MonsterEditorButton.Size = new System.Drawing.Size(161, 47);
-            this.MonsterEditorButton.TabIndex = 38;
-            this.MonsterEditorButton.Text = "Monster Editor";
-            this.MonsterEditorButton.UseVisualStyleBackColor = true;
-            this.MonsterEditorButton.Click += new System.EventHandler(this.MonsterEditorButton_Click);
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Location = new System.Drawing.Point(1482, 857);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(150, 39);
+            this.button1.TabIndex = 38;
+            this.button1.Text = "Go Back";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // Form1
+            // ItemEditor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1600, 865);
-            this.Controls.Add(this.MonsterEditorButton);
+            this.ClientSize = new System.Drawing.Size(1644, 908);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.ItemWeightTextBox);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.ArticleTextBox);
@@ -883,7 +884,7 @@ namespace ItemEditorJSON
             this.Controls.Add(this.CurrencyPanel);
             this.Controls.Add(this.ToolPanel);
             this.Margin = new System.Windows.Forms.Padding(6);
-            this.Name = "Form1";
+            this.Name = "ItemEditor";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ArmorPanel.ResumeLayout(false);
@@ -967,7 +968,7 @@ namespace ItemEditorJSON
         private System.Windows.Forms.Panel CurrencyPanel;
         public System.Windows.Forms.TextBox CurrencyPriceTextBox;
         private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.Button MonsterEditorButton;
+        private System.Windows.Forms.Button button1;
     }
 }
 

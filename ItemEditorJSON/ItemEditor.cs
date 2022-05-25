@@ -14,10 +14,10 @@ using System.Windows.Forms;
 
 namespace ItemEditorJSON
 {
-    public partial class Form1 : Form
+    public partial class ItemEditor : Form
     {
         int numberOfImages = 37;
-        public Form1()
+        public ItemEditor()
         {
             InitializeComponent();
             ImageNumberTextBox.Text = "1";
@@ -30,6 +30,7 @@ namespace ItemEditorJSON
             ImageNumberTextBox.Text = "1000";
             ItemIDTextBox.Text = ImageNumberTextBox.Text;
             pictureBox1.Image = (Image)Properties.Resources.ResourceManager.GetObject("_" + ImageNumberTextBox.Text);
+            Item.ItemList.Clear();
         }
         private void CurrentLoadedItemsListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -428,12 +429,11 @@ namespace ItemEditorJSON
             }
             RefreshItemList();
         }
-
-        private void MonsterEditorButton_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            Form MonsterEditorForm = new Form2();
+            Form StartForm = new StartForm();
             this.Visible = false;
-            MonsterEditorForm.ShowDialog();
+            StartForm.ShowDialog();
             this.Close();
         }
     }
