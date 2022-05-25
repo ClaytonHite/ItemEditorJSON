@@ -51,17 +51,17 @@
   <ItemGroup>
     <Compile Include="Entities\Monster\LootTable.cs" />
     <Compile Include="Entities\Monster\Monster.cs" />
-    <Compile Include="MonsterEditor.cs">
+    <Compile Include="Forms\MonsterEditor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MonsterEditor.Designer.cs">
+    <Compile Include="Forms\MonsterEditor.Designer.cs">
       <DependentUpon>MonsterEditor.cs</DependentUpon>
     </Compile>
     <Compile Include="Items\Attributes\ItemAttribute.cs" />
-    <Compile Include="ItemEditor.cs">
+    <Compile Include="Forms\ItemEditor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ItemEditor.Designer.cs">
+    <Compile Include="Forms\ItemEditor.Designer.cs">
       <DependentUpon>ItemEditor.cs</DependentUpon>
     </Compile>
     <Compile Include="Items\Equipment\Ammo.cs" />
@@ -72,27 +72,27 @@
     <Compile Include="Items\Equipment\Tool.cs" />
     <Compile Include="Items\Equipment\Weapon.cs" />
     <Compile Include="Items\Item.cs" />
-    <Compile Include="NPCEditor.cs">
+    <Compile Include="Forms\NPCEditor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NPCEditor.Designer.cs">
+    <Compile Include="Forms\NPCEditor.Designer.cs">
       <DependentUpon>NPCEditor.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StartForm.cs">
+    <Compile Include="Forms\StartForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="StartForm.Designer.cs">
+    <Compile Include="Forms\StartForm.Designer.cs">
       <DependentUpon>StartForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="ItemEditor.resx">
+    <EmbeddedResource Include="Forms\ItemEditor.resx">
       <DependentUpon>ItemEditor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MonsterEditor.resx">
+    <EmbeddedResource Include="Forms\MonsterEditor.resx">
       <DependentUpon>MonsterEditor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NPCEditor.resx">
+    <EmbeddedResource Include="Forms\NPCEditor.resx">
       <DependentUpon>NPCEditor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -105,7 +105,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="StartForm.resx">
+    <EmbeddedResource Include="Forms\StartForm.resx">
       <DependentUpon>StartForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />

@@ -186,5 +186,37 @@ namespace ItemEditorJSON
             StartForm.ShowDialog();
             this.Close();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            using (StreamReader file = new StreamReader(@".\ItemsJSON\Monsters.json"))
+            {
+                string json = file.ReadToEnd();
+                Monster.Monsters = JsonConvert.DeserializeObject<List<Monster>>(json);
+            }
+            RefreshMonsterList();
+        }
+
+        private void MonsterList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (MonsterList.SelectedIndex < Item.ItemList.Count && MonsterList.SelectedIndex >= 0)
+            {
+                Monster SelectedItem = Monster.Monsters[MonsterList.SelectedIndex];
+                MonsterIDTextBox.Text = Convert.ToString(SelectedItem.ID);
+                MonsterNameTextBox.Text = SelectedItem.Name;
+                MonsterRaceTextBox.Text = SelectedItem.Race;
+                MonsterHealthTextBox.Text = Convert.ToString(SelectedItem.Health);
+                MonsterLevelTextBox.Text = Convert.ToString(SelectedItem.Level);
+                MonsterStrengthTextBox.Text = Convert.ToString(SelectedItem.Strength);
+                MonsterDexterityTextBox.Text = Convert.ToString(SelectedItem.Dexterity);
+                MonsterIntellectTextBox.Text = Convert.ToString(SelectedItem.Intellect);
+                MonsterXPGivenTextBox.Text = Convert.ToString(SelectedItem.ExperienceGiven);
+                MonsterClassTypeComboBox.Text = SelectedItem.ClassType;
+                foreach (LootTable loot in SelectedItem.LootTable)
+                {
+                    MonsterLootTable.Items.Add($"ID:{loot.LootItem.ID}, {loot.LootItem.Name}, # = {loot.LootCount}, % = {loot.LootChance}");
+                }
+            }
+        }
     }
 }

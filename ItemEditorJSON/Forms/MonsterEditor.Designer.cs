@@ -351,6 +351,7 @@
             this.MonsterList.Name = "MonsterList";
             this.MonsterList.Size = new System.Drawing.Size(396, 779);
             this.MonsterList.TabIndex = 31;
+            this.MonsterList.SelectedIndexChanged += new System.EventHandler(this.MonsterList_SelectedIndexChanged);
             // 
             // label12
             // 
@@ -422,6 +423,7 @@
             this.button5.TabIndex = 37;
             this.button5.Text = "Load";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button6
             // 

@@ -401,42 +401,49 @@ namespace ItemEditorJSON
 
         private void LoadButton_Click(object sender, EventArgs e)
         {
-            using (StreamReader file = new StreamReader(@".\ItemsJSON\Ammos.json"))
+            if (Item.ItemList.Count == 0)
             {
-                string json = file.ReadToEnd();
-                Ammo.ammoList = JsonConvert.DeserializeObject<List<Ammo>>(json);
+                using (StreamReader file = new StreamReader(@".\ItemsJSON\Ammos.json"))
+                {
+                    string json = file.ReadToEnd();
+                    Ammo.ammoList = JsonConvert.DeserializeObject<List<Ammo>>(json);
+                }
+                using (StreamReader file = new StreamReader(@".\ItemsJSON\Armors.json"))
+                {
+                    string json = file.ReadToEnd();
+                    Armor.Armors = JsonConvert.DeserializeObject<List<Armor>>(json);
+                }
+                using (StreamReader file = new StreamReader(@".\ItemsJSON\Currency.json"))
+                {
+                    string json = file.ReadToEnd();
+                    Currency.Currencies = JsonConvert.DeserializeObject<List<Currency>>(json);
+                }
+                using (StreamReader file = new StreamReader(@".\ItemsJSON\Consumable.json"))
+                {
+                    string json = file.ReadToEnd();
+                    Consumable.Consumables = JsonConvert.DeserializeObject<List<Consumable>>(json);
+                }
+                using (StreamReader file = new StreamReader(@".\ItemsJSON\Miscellaneous.json"))
+                {
+                    string json = file.ReadToEnd();
+                    Miscellaneous.miscellaneousList = JsonConvert.DeserializeObject<List<Miscellaneous>>(json);
+                }
+                using (StreamReader file = new StreamReader(@".\ItemsJSON\Tools.json"))
+                {
+                    string json = file.ReadToEnd();
+                    Tool.Tools = JsonConvert.DeserializeObject<List<Tool>>(json);
+                }
+                using (StreamReader file = new StreamReader(@".\ItemsJSON\Weapons.json"))
+                {
+                    string json = file.ReadToEnd();
+                    Weapon.Weapons = JsonConvert.DeserializeObject<List<Weapon>>(json);
+                }
+                RefreshItemList();
             }
-            using (StreamReader file = new StreamReader(@".\ItemsJSON\Armors.json"))
+            else
             {
-                string json = file.ReadToEnd();
-                Armor.Armors = JsonConvert.DeserializeObject<List<Armor>>(json);
+                MessageBox.Show("Please delete all items in list before loading again.");
             }
-            using (StreamReader file = new StreamReader(@".\ItemsJSON\Currency.json"))
-            {
-                string json = file.ReadToEnd();
-                Currency.Currencies = JsonConvert.DeserializeObject<List<Currency>>(json);
-            }
-            using (StreamReader file = new StreamReader(@".\ItemsJSON\Consumable.json"))
-            {
-                string json = file.ReadToEnd();
-                Consumable.Consumables = JsonConvert.DeserializeObject<List<Consumable>>(json);
-            }
-            using (StreamReader file = new StreamReader(@".\ItemsJSON\Miscellaneous.json"))
-            {
-                string json = file.ReadToEnd();
-                Miscellaneous.miscellaneousList = JsonConvert.DeserializeObject<List<Miscellaneous>>(json);
-            }
-            using (StreamReader file = new StreamReader(@".\ItemsJSON\Tools.json"))
-            {
-                string json = file.ReadToEnd();
-                Tool.Tools = JsonConvert.DeserializeObject<List<Tool>>(json);
-            }
-            using (StreamReader file = new StreamReader(@".\ItemsJSON\Weapons.json"))
-            {
-                string json = file.ReadToEnd();
-                Weapon.Weapons = JsonConvert.DeserializeObject<List<Weapon>>(json);
-            }
-            RefreshItemList();
         }
         private void button1_Click(object sender, EventArgs e)
         {
