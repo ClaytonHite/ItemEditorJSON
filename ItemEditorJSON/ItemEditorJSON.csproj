@@ -51,27 +51,28 @@
   <ItemGroup>
     <Compile Include="Entities\Monster\LootTable.cs" />
     <Compile Include="Entities\Monster\Monster.cs" />
+    <Compile Include="Entities\NPCs\NPC.cs" />
     <Compile Include="Forms\MonsterEditor.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\MonsterEditor.Designer.cs">
       <DependentUpon>MonsterEditor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Items\Attributes\ItemAttribute.cs" />
+    <Compile Include="Entities\Items\Attributes\ItemAttribute.cs" />
     <Compile Include="Forms\ItemEditor.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\ItemEditor.Designer.cs">
       <DependentUpon>ItemEditor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Items\Equipment\Ammo.cs" />
-    <Compile Include="Items\Equipment\Armor.cs" />
-    <Compile Include="Items\Equipment\Currency.cs" />
-    <Compile Include="Items\Equipment\Consumable.cs" />
-    <Compile Include="Items\Equipment\Miscellaneous.cs" />
-    <Compile Include="Items\Equipment\Tool.cs" />
-    <Compile Include="Items\Equipment\Weapon.cs" />
-    <Compile Include="Items\Item.cs" />
+    <Compile Include="Entities\Items\Equipment\Ammo.cs" />
+    <Compile Include="Entities\Items\Equipment\Armor.cs" />
+    <Compile Include="Entities\Items\Equipment\Currency.cs" />
+    <Compile Include="Entities\Items\Equipment\Consumable.cs" />
+    <Compile Include="Entities\Items\Equipment\Miscellaneous.cs" />
+    <Compile Include="Entities\Items\Equipment\Tool.cs" />
+    <Compile Include="Entities\Items\Equipment\Weapon.cs" />
+    <Compile Include="Entities\Items\Item.cs" />
     <Compile Include="Forms\NPCEditor.cs">
       <SubType>Form</SubType>
     </Compile>
