@@ -10,17 +10,16 @@ namespace ItemEditorJSON.Entities.NPCs
     {
         public int ID;
         public string Name;
-        public string Race;
         public int ImageID;
-        public string QuestScript;
-        public static List<NPC> NPCs = new List<NPC>();
-        public NPC(int iD, string name, string race, int imageID, string questScript)
+        public string NPCScript;
+        static List<NPC> NPCs = new List<NPC>();
+        public NPC(int iD, string name, int imageID, string npcScript)
         {
             ID = iD;
             Name = name;
-            Race = race;
             ImageID = imageID;
-            QuestScript = questScript;
+            NPCScript = npcScript;
+            RegisterNPC(this);
         }
         public void DestroySelf()
         {
@@ -37,6 +36,10 @@ namespace ItemEditorJSON.Entities.NPCs
         public static List<NPC> GetNPCList()
         {
             return NPCs;
+        }
+        public static void LoadNpcs(List<NPC> npcs)
+        {
+            NPCs = npcs;
         }
     }
 }

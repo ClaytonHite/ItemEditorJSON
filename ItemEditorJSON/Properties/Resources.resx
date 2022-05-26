@@ -229,6 +229,27 @@
   <data name="_1036" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1036.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="_2000" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\2000.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_2001" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\2001.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_2002" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\2002.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_2003" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\2003.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_2004" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\2004.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_2005" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\2005.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_2006" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\2006.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="_500" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\_500.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>

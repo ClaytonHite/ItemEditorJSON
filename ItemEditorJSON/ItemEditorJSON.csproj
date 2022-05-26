@@ -258,5 +258,26 @@
   <ItemGroup>
     <None Include="Resources\_506.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2002.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2003.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2004.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2005.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2006.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2000.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
