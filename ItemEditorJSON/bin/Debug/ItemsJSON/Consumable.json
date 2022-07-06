@@ -1,0 +1,44 @@
+[
+  {
+    "ID": 1034,
+    "Article": "a",
+    "Name": "Health Potion",
+    "Weight": 0,
+    "ImageNumber": 1034,
+    "Stackable": false,
+    "ItemType": "Food",
+    "HealthAmountPerTick": 100,
+    "ManaAmountPerTick": 0,
+    "FullDuration": 0,
+    "Price": 100,
+    "AmountOfItem": 0
+  },
+  {
+    "ID": 1035,
+    "Article": "a",
+    "Name": "Mana Potion",
+    "Weight": 0,
+    "ImageNumber": 1035,
+    "Stackable": false,
+    "ItemType": "Food",
+    "HealthAmountPerTick": 2,
+    "ManaAmountPerTick": 2,
+    "FullDuration": 100,
+    "Price": 5,
+    "AmountOfItem": 0
+  },
+  {
+    "ID": 1036,
+    "Article": "an",
+    "Name": "Apple",
+    "Weight": 0,
+    "ImageNumber": 1036,
+    "Stackable": false,
+    "ItemType": "Food",
+    "HealthAmountPerTick": 2,
+    "ManaAmountPerTick": 2,
+    "FullDuration": 100,
+    "Price": 5,
+    "AmountOfItem": 0
+  }
+]

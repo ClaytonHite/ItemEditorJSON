@@ -1,0 +1,80 @@
+[
+  {
+    "ID": 1026,
+    "Article": "a",
+    "Name": "Bronze Shield",
+    "Weight": 3,
+    "ImageNumber": 1026,
+    "Stackable": false,
+    "ItemType": "Armor",
+    "ArmorAmount": 1,
+    "Hands": 0,
+    "Price": 84,
+    "ArmorType": "Shield"
+  },
+  {
+    "ID": 1027,
+    "Article": "a",
+    "Name": "Bronze Helmet",
+    "Weight": 2,
+    "ImageNumber": 1027,
+    "Stackable": false,
+    "ItemType": "Armor",
+    "ArmorAmount": 1,
+    "Hands": 0,
+    "Price": 42,
+    "ArmorType": "Head"
+  },
+  {
+    "ID": 1028,
+    "Article": "a",
+    "Name": "Bronze Armor",
+    "Weight": 6,
+    "ImageNumber": 1028,
+    "Stackable": false,
+    "ItemType": "Armor",
+    "ArmorAmount": 1,
+    "Hands": 0,
+    "Price": 76,
+    "ArmorType": "Chest"
+  },
+  {
+    "ID": 1029,
+    "Article": "",
+    "Name": "Bronze Legs",
+    "Weight": 3,
+    "ImageNumber": 1029,
+    "Stackable": false,
+    "ItemType": "Armor",
+    "ArmorAmount": 1,
+    "Hands": 0,
+    "Price": 67,
+    "ArmorType": "Legs"
+  },
+  {
+    "ID": 1030,
+    "Article": "",
+    "Name": "Bronze Boots",
+    "Weight": 3,
+    "ImageNumber": 1030,
+    "Stackable": false,
+    "ItemType": "Armor",
+    "ArmorAmount": 1,
+    "Hands": 0,
+    "Price": 36,
+    "ArmorType": "Feet"
+  },
+  {
+    "ID": 1033,
+    "Article": "a",
+    "Name": "Bronze Ring",
+    "Weight": 5,
+    "ImageNumber": 1033,
+    "Stackable": false,
+    "ItemType": "Armor",
+    "ArmorAmount": 0,
+    "Hands": 0,
+    "Price": 0,
+    "ArmorType": "Ring"
+  }
+]
