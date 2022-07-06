@@ -43,9 +43,5 @@ namespace ItemEditorJSON
         {
             return new Item(ID,Article,Name,ImageNumber,Weight,Stackable,ItemType);
         }
-        public static List<Item> GetItems()
-        {
-            return ItemList;
-        }
     }
 }
