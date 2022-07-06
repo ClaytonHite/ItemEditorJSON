@@ -154,7 +154,6 @@ namespace ItemEditorJSON
             this.ItemIDTextBox.Location = new System.Drawing.Point(298, 17);
             this.ItemIDTextBox.Margin = new System.Windows.Forms.Padding(6);
             this.ItemIDTextBox.Name = "ItemIDTextBox";
-            this.ItemIDTextBox.ReadOnly = true;
             this.ItemIDTextBox.Size = new System.Drawing.Size(310, 31);
             this.ItemIDTextBox.TabIndex = 5;
             // 

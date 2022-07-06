@@ -29,7 +29,6 @@ namespace ItemEditorJSON
             ToolPanel.Hide();
             CurrencyPanel.Hide();
             ImageNumberTextBox.Text = "1000";
-            ItemIDTextBox.Text = ImageNumberTextBox.Text;
             pictureBox1.Image = (Image)Properties.Resources.ResourceManager.GetObject("_" + ImageNumberTextBox.Text);
             for (int i = 1000; i < 1500; i++)
             {
@@ -137,7 +136,6 @@ namespace ItemEditorJSON
                 ImageNumberTextBox.Text = $"{numberOfImages + 1000}";
             }
             ImageNumberTextBox.Text = $"{Convert.ToInt32(ImageNumberTextBox.Text) - 1}";
-            ItemIDTextBox.Text = ImageNumberTextBox.Text;
             pictureBox1.Image = (Image)Properties.Resources.ResourceManager.GetObject("_" + ImageNumberTextBox.Text);
         }
         private void RightButtonImage_Click(object sender, EventArgs e)
@@ -147,7 +145,6 @@ namespace ItemEditorJSON
                 ImageNumberTextBox.Text = $"{999}";
             }
             ImageNumberTextBox.Text = $"{Convert.ToInt32(ImageNumberTextBox.Text) + 1}";
-            ItemIDTextBox.Text = ImageNumberTextBox.Text;
             pictureBox1.Image = (Image)Properties.Resources.ResourceManager.GetObject("_" + ImageNumberTextBox.Text);
         }
         private void AddButton_Click(object sender, EventArgs e)
