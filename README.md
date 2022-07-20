@@ -2,7 +2,7 @@
 
 Welcome to my project! 
 
-I wanted to make something fun and useful. I decided to build a program that would help make work more streamlined as I'm building a multiplayer 2d game engine. Instead of writing all the information in text, this program puts visualization to what the item would look like, automatically chooses the right information needed for a specific type of weapon chosen, and stores it in a json that can be implemented directly into the server when being loaded. I have also added more on to it since the original conception. You can also play around with the monster editor and npc editor that is included.
+I wanted to make something fun and useful. I decided to build a program that would help make work more streamlined as I'm building a multiplayer 2d game engine. Instead of writing all the information in text, this program puts visualization to what the item would look like, automatically chooses the right information needed for a specific type of item chosen, and stores it in a json that can be implemented directly by copy and pasting the file into the server files and are loaded on start up. I have also added more on to it since the original conception. You can also play around with the monster editor and npc editor that is included and check out the sprites that I made!
 
 Feature List:
 
