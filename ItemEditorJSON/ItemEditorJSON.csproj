@@ -109,6 +109,14 @@
     <EmbeddedResource Include="Forms\StartForm.resx">
       <DependentUpon>StartForm.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="JSONFiles\Ammos.json" />
+    <None Include="JSONFiles\Armors.json" />
+    <None Include="JSONFiles\Consumable.json" />
+    <None Include="JSONFiles\Currency.json" />
+    <None Include="JSONFiles\Items.json" />
+    <None Include="JSONFiles\Miscellaneous.json" />
+    <None Include="JSONFiles\Monsters.json" />
+    <None Include="JSONFiles\NPCs.json" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -119,6 +127,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="JSONFiles\Tools.json" />
+    <None Include="JSONFiles\Weapons.json" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -279,5 +289,6 @@
   <ItemGroup>
     <None Include="Resources\2000.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
