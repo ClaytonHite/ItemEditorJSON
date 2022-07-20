@@ -392,6 +392,7 @@ namespace ItemEditorJSON
 
         private void LoadButton_Click(object sender, EventArgs e)
         {
+            Item.ItemList.Clear();
             if (Item.ItemList.Count == 0)
             {
                 using (StreamReader file = new StreamReader(@".\ItemsJSON\Ammos.json"))
